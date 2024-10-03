@@ -1,0 +1,16 @@
+<?php
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+
+/** @var \Magento\Framework\View\Element\Template $block */
+
+const URL = 'adminhtml/system_config/edit/section/endora_expertsender_forms';
+?>
+
+<h2>
+    <?= $block->escapeHtml(__('You can change form single/double opt-in settings')) . ' '; ?>
+    <a href="<?= $block->escapeHtmlAttr(URL); ?>"><?= $block->escapeHtml(__('here')); ?></a>
+</h2>

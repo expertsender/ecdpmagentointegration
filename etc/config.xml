@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <endora_expertsender>
+            <general>
+                <apikey backend_model="Magento\Config\Model\Config\Backend\Encrypted"/>
+                <enable_api_log>0</enable_api_log>
+            </general>
+            <cron>
+                <order_sync_interval>1</order_sync_interval>
+                <order_sync_max_attempts>5</order_sync_max_attempts>
+                <customer_sync_interval>1</customer_sync_interval>
+                <customer_sync_max_attempts>5</customer_sync_max_attempts>
+            </cron>
+            <customer_data>
+                <phone_from_address>billing_address</phone_from_address>
+                <send_customer_phone_enabled>1</send_customer_phone_enabled>
+            </customer_data>
+            <order_data>
+                <order_identifier>id</order_identifier>
+            </order_data>
+        </endora_expertsender>
+        <endora_expertsender_forms>
+            <general>
+                <use_custom_newsletter_form>0</use_custom_newsletter_form>
+            </general>
+            <form_type>
+                <registration_form_type>single-opt-in</registration_form_type>
+                <profile_edit_form_type>single-opt-in</profile_edit_form_type>
+                <checkout_form_type>single-opt-in</checkout_form_type>
+                <newsletter_form_type>single-opt-in</newsletter_form_type>
+            </form_type>
+        </endora_expertsender_forms>
+        <crontab>
+            <endora_expertsender>
+                <jobs>
+                    <endora_expertsender_order_sync>
+                        <schedule>
+                            <cron_expr>*/5 * * * *</cron_expr>
+                        </schedule>
+                    </endora_expertsender_order_sync>
+                    <endora_expertsender_customer_sync>
+                        <schedule>
+                            <cron_expr>*/5 * * * *</cron_expr>
+                        </schedule>
+                    </endora_expertsender_customer_sync>
+                </jobs>
+            </endora_expertsender>
+        </crontab>
+    </default>
+</config>

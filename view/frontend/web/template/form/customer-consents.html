@@ -1,0 +1,30 @@
+<!--
+/**
+* @author Endora
+* @copyright Copyright (c) Endora (https://endora.software)
+* @package Endora_ExpertSenderCdp
+*/
+-->
+<!-- ko if: customerConsents -->
+<div class="customer-consents fieldset">
+    <!-- ko if: getTextBeforeConsents -->
+    <div data-bind="text: getTextBeforeConsents()"></div>
+    <!-- /ko -->
+    <!-- ko foreach: customerConsents -->
+    <div class="customer-consent field choice">
+        <input type="checkbox" data-bind="
+                attr: { 
+                    'id': 'expertsender_consents_' + value,
+                    'name': 'expertsender_consents[]',
+                    'checked': checked
+                },
+                'click': $parent.selectConsent,
+                'value': value
+        " />
+        <label class="label" data-bind="attr: { 'for': 'expertsender_consents_' + value }">
+            <span data-bind="text: content"></span>
+        </label>
+    </div>
+    <!-- /ko -->
+</div>
+<!-- /ko -->

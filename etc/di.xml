@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Endora\ExpertSenderCdp\Api\Data\FieldMappingInterface"
+        type="Endora\ExpertSenderCdp\Model\FieldMapping"/>
+    <preference for="Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface"
+        type="Endora\ExpertSenderCdp\Model\FieldMappingRepository"/>
+    <preference for="Endora\ExpertSenderCdp\Api\FieldMappingSearchResultInterface"
+        type="Magento\Framework\Api\SearchResults"/>
+    <virtualType name="Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\Grid\Collection"
+        type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">endora_expertsender_field_mappings</argument>
+            <argument name="resourceModel" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="field_mapping_listing_data_source" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Config\Model\Config\TypePool">
+        <arguments>
+            <argument name="sensitive" xsi:type="array">
+                <item name="endora_expertsender/general/apikey" xsi:type="string">1</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Endora\ExpertSenderCdp\Api\Data\TaskInterface"
+        type="Endora\ExpertSenderCdp\Model\Task"/>
+    <preference for="Endora\ExpertSenderCdp\Api\TaskRepositoryInterface"
+        type="Endora\ExpertSenderCdp\Model\TaskRepository"/>
+    <preference for="Endora\ExpertSenderCdp\Api\TaskSearchResultInterface"
+        type="Magento\Framework\Api\SearchResults"/>
+    <preference for="Endora\ExpertSenderCdp\Api\Data\ConsentInterface"
+        type="Endora\ExpertSenderCdp\Model\Consent"/>
+    <preference for="Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface"
+        type="Endora\ExpertSenderCdp\Model\ConsentRepository"/>
+    <preference for="Endora\ExpertSenderCdp\Api\ConsentSearchResultInterface"
+        type="Magento\Framework\Api\SearchResults"/>
+    <virtualType name="Endora\ExpertSenderCdp\Model\ResourceModel\Consent\Grid\Collection"
+        type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">endora_expertsender_consents</argument>
+            <argument name="resourceModel" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\Consent</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="consent_listing_data_source" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\Consent\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface"
+        type="Endora\ExpertSenderCdp\Model\Consent\FormElement"/>
+    <preference for="Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface"
+        type="Endora\ExpertSenderCdp\Model\Consent\FormElementRepository"/>
+    <preference for="Endora\ExpertSenderCdp\Api\ConsentFormElementSearchResultInterface"
+        type="Magento\Framework\Api\SearchResults"/>
+    <virtualType name="Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">endora_expertsender_consent_form_elements</argument>
+            <argument name="resourceModel" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="consent_form_element_listing_data_source" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Checkout\Model\PaymentInformationManagement">
+        <plugin name="endora_expertsender_save_customer_consents_from_payment" type="Endora\ExpertSenderCdp\Plugin\SaveCustomerConsentsFromPayment"/>
+    </type>
+    <type name="Magento\Checkout\Model\GuestPaymentInformationManagement">
+        <plugin name="endora_expertsender_guest_save_customer_consents_from_payment" type="Endora\ExpertSenderCdp\Plugin\GuestSaveCustomerConsentsFromPayment"/>
+    </type>
+    <virtualType name="Endora\ExpertSenderCdp\ViewModel\Registration\CustomerConsents" type="Endora\ExpertSenderCdp\ViewModel\CustomerConsents">
+        <arguments>
+            <argument name="form" xsi:type="string">registration</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Endora\ExpertSenderCdp\ViewModel\Account\Edit\CustomerConsents" type="Endora\ExpertSenderCdp\ViewModel\CustomerConsents">
+        <arguments>
+            <argument name="form" xsi:type="string">profile_edit</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Endora\ExpertSenderCdp\ViewModel\Newsletter\CustomerConsents" type="Endora\ExpertSenderCdp\ViewModel\CustomerConsents">
+        <arguments>
+            <argument name="form" xsi:type="string">newsletter</argument>
+        </arguments>
+    </virtualType>
+    <preference for="Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterface" type="Endora\ExpertSenderCdp\Model\OrderStatusMapping"/>
+    <preference for="Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface" type="Endora\ExpertSenderCdp\Model\OrderStatusMappingRepository"/>
+    <preference for="Endora\ExpertSenderCdp\Api\OrderStatusMappingSearchResultInterface" type="Magento\Framework\Api\SearchResults"/>
+    <virtualType name="Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">endora_expertsender_order_status_mappings</argument>
+            <argument name="resourceModel" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="order_status_mapping_listing_data_source" xsi:type="string">Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ExpertSenderApiLogger" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">Endora\ExpertSenderCdp\Logger\Handler\ApiHandler</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Endora\ExpertSenderCdp\Model\HttpClient">
+        <arguments>
+            <argument name="logger" xsi:type="object">ExpertSenderApiLogger</argument>
+        </arguments>
+    </type>
+</config>

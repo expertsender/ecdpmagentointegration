@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">field_mapping_form.field_mapping_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Attribute Mapping</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="back" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericBackButton"/>
+            <button name="delete" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericDeleteButton"/>
+            <button name="save" class="Endora\ExpertSenderCdp\Block\Adminhtml\FieldMapping\SaveButton"/>
+        </buttons>
+        <namespace>field_mapping_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>field_mapping_form.field_mapping_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="field_mapping_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="*/*/save"/>
+        </settings>
+        <dataProvider name="field_mapping_form_data_source" class="Endora\ExpertSenderCdp\Model\FieldMapping\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label></label>
+        </settings>
+        <field name="magento_field" sortOrder="10" formElement="input">
+            <settings>
+                <label translate="true">Magento Field</label>
+                <dataType>text</dataType>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule> 
+                </validation>
+            </settings>
+        </field>
+        <field name="entity" sortOrder="20" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="switcherConfig" xsi:type="array">
+                        <item name="enabled" xsi:type="boolean">true</item>
+                        <item name="rules" xsi:type="array">
+                            <item name="0" xsi:type="array">
+                                <item name="value" xsi:type="number">1</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_customer_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">true</item>
+                                        </item>
+                                    </item>
+                                    <item name="1" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_product_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">false</item>
+                                        </item>
+                                    </item>
+                                    <item name="2" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_order_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">false</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                            <item name="1" xsi:type="array">
+                                <item name="value" xsi:type="number">2</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_product_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">true</item>
+                                        </item>
+                                    </item>
+                                    <item name="1" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_customer_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">false</item>
+                                        </item>
+                                    </item>
+                                    <item name="2" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_order_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">false</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                            <item name="2" xsi:type="array">
+                                <item name="value" xsi:type="number">3</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_order_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">true</item>
+                                        </item>
+                                    </item>
+                                    <item name="1" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_product_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">false</item>
+                                        </item>
+                                    </item>
+                                    <item name="2" xsi:type="array">
+                                        <item name="target" xsi:type="string">field_mapping_form.field_mapping_form.general.ecdp_customer_field</item>
+                                        <item name="callback" xsi:type="string">visible</item>
+                                        <item name="params" xsi:type="array">
+                                            <item name="0" xsi:type="boolean">false</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Relates to resource</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Form\Column\Entity\Options"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="ecdp_customer_field" sortOrder="30" formElement="select">
+            <settings>
+                <label translate="true">ExpertSender CDP attribute</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <visible>true</visible>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Form\Column\EcdpCustomerField\Options"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="ecdp_product_field" sortOrder="30" formElement="select">
+            <settings>
+                <label translate="true">ExpertSender CDP attribute</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <visible>true</visible>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Form\Column\EcdpProductField\Options"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="ecdp_order_field" sortOrder="30" formElement="select">
+            <settings>
+                <label translate="true">ExpertSender CDP attribute</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <visible>true</visible>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Form\Column\EcdpOrderField\Options"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

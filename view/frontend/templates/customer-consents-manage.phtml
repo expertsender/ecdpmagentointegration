@@ -1,0 +1,38 @@
+<?php
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+
+/** @var \Magento\Customer\Block\Form\Edit $block */
+$consentsBlock = $block->getChildBlock('endora_expertsender.customer_consents');
+
+/** @var \Endora\ExpertSenderCdp\ViewModel\CustomerConsents */
+$consentsViewModel = $consentsBlock->getViewModel();
+?>
+
+<?php if (!empty($consentsViewModel->getFormElements())): ?>
+    <form
+        class="form form-manage-consents"
+        action="<?= $block->escapeUrl($block->getUrl('expertsender/customerconsents/save')) ?>"
+        method="post"
+        id="form-validate"
+        enctype="multipart/form-data"
+        autocomplete="off"
+    >
+        <?= $block->getBlockHtml('formkey'); ?>
+        <?= $block->getChildHtml('endora_expertsender.customer_consents'); ?>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>">
+                    <span><?= $block->escapeHtml(__('Save')) ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+<?php else: ?>
+    <div class="message info empty">
+        <span><?= $block->escapeHtml(__('There are no consents yet.')) ?></span>
+    </div>
+<?php endif; ?>

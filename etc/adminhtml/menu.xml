@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Endora_ExpertSenderCdp::expertsender" title="ExpertSender" module="Endora_ExpertSenderCdp" sortOrder="100" resource="Endora_ExpertSenderCdp::expertsender"/>
+        <add id="Endora_ExpertSenderCdp::mappings" title="Mappings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="10" resource="Endora_ExpertSenderCdp::field_mapping" parent="Endora_ExpertSenderCdp::expertsender"/>
+        <add id="Endora_ExpertSenderCdp::field_mapping" title="Custom Field Mappings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="10" resource="Endora_ExpertSenderCdp::expertsender" action="expertsender/fieldmapping/index" parent="Endora_ExpertSenderCdp::mappings"/>
+        <add id="Endora_ExpertSenderCdp::order_status_mapping" title="Order Status Mappings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="20" resource="Endora_ExpertSenderCdp::order_status_mapping" action="expertsender/orderstatusmapping/index" parent="Endora_ExpertSenderCdp::mappings"/>
+        <add id="Endora_ExpertSenderCdp::customer_consents" title="Customer Consents" translate="title" module="Endora_ExpertSenderCdp" sortOrder="20" resource="Endora_ExpertSenderCdp::customer_consents" parent="Endora_ExpertSenderCdp::expertsender"/>
+        <add id="Endora_ExpertSenderCdp::consent" title="Consents" translate="title" module="Endora_ExpertSenderCdp" sortOrder="10" resource="Endora_ExpertSenderCdp::consent" action="expertsender/consent/index" parent="Endora_ExpertSenderCdp::customer_consents"/>
+        <add id="Endora_ExpertSenderCdp::consent_form_element" title="Consent Form Elements" translate="title" module="Endora_ExpertSenderCdp" sortOrder="20" resource="Endora_ExpertSenderCdp::consent_form_element" action="expertsender/consent_formelement/index" parent="Endora_ExpertSenderCdp::customer_consents"/>
+        <add id="Endora_ExpertSenderCdp::settings" title="Settings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="30" resource="Endora_ExpertSenderCdp::settings" parent="Endora_ExpertSenderCdp::expertsender"/>
+        <add id="Endora_ExpertSenderCdp::general_settings" title="General Settings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="10" resource="Endora_ExpertSenderCdp::general_settings" action="adminhtml/system_config/edit/section/endora_expertsender" parent="Endora_ExpertSenderCdp::settings"/>
+        <add id="Endora_ExpertSenderCdp::form_settings" title="Form Settings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="20" resource="Endora_ExpertSenderCdp::form_settings" action="adminhtml/system_config/edit/section/endora_expertsender_forms" parent="Endora_ExpertSenderCdp::settings"/>
+    </menu>
+</config>
