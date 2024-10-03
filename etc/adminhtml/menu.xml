@@ -8,7 +8,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Endora_ExpertSenderCdp::expertsender" title="ExpertSender" module="Endora_ExpertSenderCdp" sortOrder="100" resource="Endora_ExpertSenderCdp::expertsender"/>
+        <add id="Endora_ExpertSenderCdp::expertsender" title="ECDP" module="Endora_ExpertSenderCdp" sortOrder="100" resource="Endora_ExpertSenderCdp::expertsender"/>
         <add id="Endora_ExpertSenderCdp::mappings" title="Mappings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="10" resource="Endora_ExpertSenderCdp::field_mapping" parent="Endora_ExpertSenderCdp::expertsender"/>
         <add id="Endora_ExpertSenderCdp::field_mapping" title="Custom Field Mappings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="10" resource="Endora_ExpertSenderCdp::expertsender" action="expertsender/fieldmapping/index" parent="Endora_ExpertSenderCdp::mappings"/>
         <add id="Endora_ExpertSenderCdp::order_status_mapping" title="Order Status Mappings" translate="title" module="Endora_ExpertSenderCdp" sortOrder="20" resource="Endora_ExpertSenderCdp::order_status_mapping" action="expertsender/orderstatusmapping/index" parent="Endora_ExpertSenderCdp::mappings"/>
