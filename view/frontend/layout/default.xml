@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Endora_ExpertSenderCdp::css/newsletter.css"/>
+    </head>
+    <body>
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="expertsender.newsletter" template="Endora_ExpertSenderCdp::newsletter.phtml" ifconfig="endora_expertsender_forms/general/use_custom_newsletter_form">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Endora\ExpertSenderCdp\ViewModel\Newsletter\CustomerConsents</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="after.body.start">
+            <block class="Endora\ExpertSenderCdp\Block\TrackingScript" name="expertsender.tracking_script" template="Endora_ExpertSenderCdp::tracking_script.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

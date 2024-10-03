@@ -1,0 +1,15 @@
+<?php
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+
+/** @var \Endora\ExpertSenderCdp\Block\TrackingScript $block */
+?>
+<?php if ($block->getIsTrackingEnabled()): ?>
+    <?php $trackingScript = $block->getTrackingScript(); ?>
+    <?php if ($trackingScript): ?>
+        <?= /* @noEscape */ $trackingScript; ?>
+    <?php endif; ?>
+<?php endif; ?>

@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="endora_expertsender" translate="label" sortOrder="130">
+            <label>Endora ExpertSender CDP</label>
+        </tab>
+        <section id="endora_expertsender" translate="label" sortOrder="10"
+            showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Settings</label>
+            <tab>endora_expertsender</tab>
+            <resource>Endora_ExpertSenderCdp::general_settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10"
+                showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="apikey" translate="label comment" type="obscure" sortOrder="10"
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Api Key</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <comment><![CDATA[How to find your API key in the ExpertSender CDP platform:<br>1. Log in to the platform.<br>2. Select the business unit.<br>3. In the main menu, find the Settings -> API section.<br>4. Copy the API key and paste it into the plugin settings.]]></comment>
+                </field>
+                <field id="track_traffic_enabled" translate="label" type="select" sortOrder="20"
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Track traffic on site</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Endora\ExpertSenderCdp\Model\Config\TrackTrafficEnabled</backend_model>
+                </field>
+                <field id="track_traffic_script" translate="label comment" type="textarea" sortOrder="30"
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Web tracking code</label>
+                    <backend_model>Endora\ExpertSenderCdp\Model\Config\TrackTrafficScript</backend_model>
+                    <comment><![CDATA[How to find the tracking code in the Expertsender CDP platform:<br>1. In the main menu, find the Settings -> Web Tracking section.<br>2. Select the relevant website and click 'Tracking code'.<br>3. Copy the code and paste it into plugin settings.]]></comment>
+                </field>
+                <field id="website_id" translate="label comment" type="text" sortOrder="40"
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Website ID</label>
+                    <comment><![CDATA[How to find the website ID in the ExpertSender CDP platform:<br>1. In the main menu, go to Settings -> Web tracking <br>2. In the Websites tab, find the appropriate website. <br>3. Check the website ID number.<br>4. Enter the website number into plugin settings.]]></comment>
+                </field>
+                <field id="enable_api_log" translate="label" type="select" sortOrder="50"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable API Log</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="cron" translate="label" type="text" sortOrder="20"
+                showInDefault="0" showInWebsite="0" showInStore="0">
+                <label>Cron Configuration</label>
+                <field id="order_sync_interval" translate="label comment" type="text" sortOrder="10"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Order synchronization interval</label>
+                    <backend_model>Endora\ExpertSenderCdp\Cron\Model\Config\OrderSyncInterval</backend_model>
+                    <comment>Interval in minutes in 1-59 range</comment>
+                    <validate>required-entry validate-number validate-digits-range digits-range-1-59</validate>
+                </field>
+                <field id="order_sync_max_attempts" translate="label" type="text" sortOrder="20"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Order synchronization max attempts</label>
+                    <validate>required-entry validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="customer_sync_interval" translate="label comment" type="text" sortOrder="30"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Customer synchronization interval</label>
+                    <backend_model>Endora\ExpertSenderCdp\Cron\Model\Config\CustomerSyncInterval</backend_model>
+                    <comment>Interval in minutes in 1-59 range</comment>
+                    <validate>required-entry validate-number validate-digits-range digits-range-1-59</validate>
+                </field>
+                <field id="customer_sync_max_attempts" translate="label" type="text" sortOrder="40"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Customer synchronization max attempts</label>
+                    <validate>required-entry validate-number validate-greater-than-zero</validate>
+                </field>
+            </group>
+            <group id="customer_data" translate="label" type="text" sortOrder="30"
+                showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customer data</label>
+                <field id="phone_from_address" translate="label" type="select" sortOrder="10"
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <source_model>Endora\ExpertSenderCdp\Model\Config\PhoneFromAddress</source_model>
+                    <label>Address from which customer phone number is collected</label>
+                </field>
+                <field id="send_customer_phone_enabled" translate="label" type="select" sortOrder="20"
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send customer phone number</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="order_data" translate="label" type="text" sortOrder="40"
+                showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Order data</label>
+                <field id="order_identifier" translate="label" type="select" sortOrder="10"
+                    showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Order identifier</label>
+                    <source_model>Endora\ExpertSenderCdp\Model\Config\OrderIdentifier</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="endora_expertsender_forms" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Forms</label>
+            <tab>endora_expertsender</tab>
+            <resource>Endora_ExpertSenderCdp::form_settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="text_before_consents" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text to display before consents in forms</label>
+                </field>
+                <field id="use_custom_newsletter_form" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use ExpertSender CDP form</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Endora\ExpertSenderCdp\Model\Config\UseCustomNewsletterForm</backend_model>
+                </field>
+            </group>
+            <group id="form_type" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Single/Double Opt-In</label>
+                <comment>If no message ID is provided for forms with Double Opt-In, default message will be sent to the customers.</comment>
+                <field id="registration_form_type" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Form Type</label>
+                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                </field>
+                <field id="registration_form_message_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Form Message ID</label>
+                    <validate>validate-number validate-greater-than-zero</validate>
+                    <depends>
+                        <field id="*/*/registration_form_type">double-opt-in</field>
+                    </depends>
+                </field>
+                <field id="profile_edit_form_type" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Profile Edit Form Type</label>
+                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                </field>
+                <field id="profile_edit_form_message_id" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Profile Edit Form Message ID</label>
+                    <validate>validate-number validate-greater-than-zero</validate>
+                    <depends>
+                        <field id="*/*/profile_edit_form_type">double-opt-in</field>
+                    </depends>
+                </field>
+                <field id="checkout_form_type" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Checkout Form Type</label>
+                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                </field>
+                <field id="checkout_form_message_id" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Checkout Form Message ID</label>
+                    <validate>validate-number validate-greater-than-zero</validate>
+                    <depends>
+                        <field id="*/*/checkout_form_type">double-opt-in</field>
+                    </depends>
+                </field>
+                <field id="newsletter_form_type" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Newsletter Form Type</label>
+                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                </field>
+                <field id="newsletter_form_message_id" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Newsletter Form Message ID</label>
+                    <validate>validate-number validate-greater-than-zero</validate>
+                    <depends>
+                        <field id="*/*/newsletter_form_type">double-opt-in</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

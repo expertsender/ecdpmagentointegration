@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Endora_ExpertSenderCdp" setup_version="1.0.3">
+        <sequence>
+            <module name="Magento_Backend"/>
+            <module name="Magento_Checkout"/>
+            <module name="Magento_Customer"/>
+            <module name="Magento_Newsletter"/>
+            <module name="Magento_Ui"/>
+            <module name="Magento_Quote"/>
+        </sequence>
+    </module>
+</config>

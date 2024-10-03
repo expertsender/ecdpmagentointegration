@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="customer_consent_config_provider" xsi:type="object">Endora\ExpertSenderCdp\Model\Consent\CheckoutConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Newsletter\Block\Subscribe">
+        <plugin name="remove_default_newsletter_block" type="Endora\ExpertSenderCdp\Plugin\RemoveDefaultNewsletterBlock"/>
+    </type>
+</config>

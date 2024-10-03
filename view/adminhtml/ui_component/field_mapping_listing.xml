@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">field_mapping_listing.field_mapping_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>field_mapping_listing_columns</spinner>
+        <deps>
+            <dep>field_mapping_listing.field_mapping_listing_data_source</dep>
+        </deps>
+        <buttons>
+            <button name="add" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericAddButton"/>
+        </buttons>
+    </settings>
+    <dataSource name="field_mapping_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider name="field_mapping_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <massaction name="listing_massaction">
+            <argument name="data" xsi:type="array">
+                <item name="data" xsi:type="array">
+                    <item name="selectProvider" xsi:type="string">field_mapping_listing.field_mapping_listing.field_mapping_listing_columns.ids</item>
+                    <item name="displayArea" xsi:type="string">bottom</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
+                    <item name="indexField" xsi:type="string">id</item>
+                </item>
+            </argument>
+            <action name="delete">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">delete</item>
+                        <item name="label" xsi:type="string" translate="true">Delete</item>
+                        <item name="url" xsi:type="url" path="expertsender/fieldmapping/massdelete"/>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Mass delete</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to delete selected records?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+        </massaction>
+        <filters name="listing_filters">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="templates" xsi:type="array">
+                        <item name="filters" xsi:type="array">
+                            <item name="select" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</item>
+                                <item name="template" xsi:type="string">ui/grid/filters/elements/ui-select</item>
+                            </item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </filters>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="field_mapping_listing_columns">
+        <selectionsColumn name="ids">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">id</item>
+                </item>
+            </argument>
+        </selectionsColumn>
+        <column name="magento_field" sortOrder="10">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Magento Field</label>
+            </settings>
+        </column>
+        <column name="ecdp_field" sortOrder="20">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">ExpertSender CDP attribute</label>
+            </settings>
+        </column>
+        <column name="entity" sortOrder="30" class="Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Listing\Column\Entity">
+            <settings>
+                <filter>select</filter>
+                <options class="Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Listing\Column\Entity\Options"/>
+                <dataType>select</dataType>
+                <label translate="true">Relates to resource</label>
+            </settings>
+        </column>
+        <column name="store" sortOrder="40" class="Endora\ExpertSenderCdp\Ui\Component\Generic\Listing\Column\Store">
+            <settings>
+                <filter>select</filter>
+                <options class="Endora\ExpertSenderCdp\Ui\Component\Generic\Listing\Column\Store\Options"/>
+                <dataType>select</dataType>
+                <label translate="true">Store</label>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Listing\Column\Actions" sortOrder="100">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </actionsColumn>
+    </columns> 
+</listing>

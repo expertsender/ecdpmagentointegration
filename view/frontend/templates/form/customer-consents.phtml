@@ -1,0 +1,35 @@
+<?php
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+
+use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
+
+/** @var \Endora\ExpertSenderCdp\ViewModel\CustomerConsents */
+$viewModel = $block->getViewModel();
+$formElements = $viewModel->getFormElements();
+$textBeforeConsents = $viewModel->getTextBeforeConsents();
+?>
+<?php if (count($formElements) > 0): ?>
+    <fieldset class="fieldset customer-consents">
+        <legend class="legend"><span><?= $block->escapeHtml(__('Customer Consents')) ?></span></legend><br>
+        <?php if (!empty($textBeforeConsents)): ?>
+            <div><?= /** @noEscape */ $textBeforeConsents; ?></div>
+        <?php endif; ?>
+        <?php foreach ($formElements as $formElement): ?>
+            <?php $elementId = $viewModel->getElementId($formElement); ?>
+            <div class="field choice">
+                <input type="checkbox" name="<?= /** @noEscape */ ConsentFormElementInterface::INPUT_NAME; ?>[]"
+                    id="<?= $block->escapeHtmlAttr($elementId); ?>"
+                    value="<?= $block->escapeHtmlAttr(implode(',', $formElement->getConsentIds())); ?>"
+                    class="checbox" title="<?= $block->escapeHtmlAttr($formElement->getContent()); ?>"
+                    <?php if ($viewModel->isAgreed($formElement)) { echo 'checked'; } ?> />
+                <label for="<?= $block->escapeHtmlAttr($elementId); ?>" class="label">
+                    <span><?= /** @noEscape */ $formElement->getContent(); ?></span>
+                </label>
+            </div>
+        <?php endforeach; ?>
+    </fieldset>
+<?php endif; ?>

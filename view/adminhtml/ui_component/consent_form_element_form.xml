@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">consent_form_element_form.consent_form_element_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Consent Form Element</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="back" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericBackButton"/>
+            <button name="delete" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericDeleteButton"/>
+            <button name="save" class="Endora\ExpertSenderCdp\Block\Adminhtml\ConsentFormElement\SaveButton"/>
+        </buttons>
+        <namespace>consent_form_element_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>consent_form_element_form.consent_form_element_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="consent_form_element_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="*/*/save"/>
+        </settings>
+        <dataProvider name="consent_form_element_form_data_source" class="Endora\ExpertSenderCdp\Model\Consent\FormElement\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label></label>
+        </settings>
+        <field name="content" sortOrder="10" formElement="textarea">
+            <settings>
+                <label translate="true">Content</label>
+                <dataType>text</dataType>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="form" sortOrder="20" formElement="select">
+            <settings>
+                <label translate="true">Form</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Form\Column\Form\Options"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="consent_ids" sortOrder="30" formElement="multiselect">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Consents</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <multiselect>
+                    <settings>
+                        <options class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Form\Column\Consent\Options"/>
+                    </settings>
+                </multiselect>
+            </formElements>
+        </field>
+        <field name="enabled" sortOrder="50" formElement="checkbox">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>boolean</dataType>
+                <label translate="true">Enabled</label>
+            </settings>
+            <formElements>
+                <checkbox>
+                    <settings>
+                        <valueMap>
+                            <map name="false" xsi:type="string">0</map>
+                            <map name="true" xsi:type="string">1</map>
+                        </valueMap>
+                        <prefer>toggle</prefer>
+                    </settings>
+                </checkbox>
+            </formElements>
+        </field>
+        <field name="sort_order" sortOrder="60" formElement="input">
+            <settings>
+                <label translate="true">Sort Order</label>
+                <dataType>text</dataType>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+    </fieldset>
+</form>

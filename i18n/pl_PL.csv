@@ -1,0 +1,148 @@
+Save,Zapisz
+"Add New","Utwórz"
+Back,Powrót
+Delete,Usuń
+"Are you sure you want to delete this item?","Czy na pewno chcesz usunąć ten element?"
+"Consent has been deleted.","Zgoda została usunięta"
+"Consent no longer exists.","Zgoda już nie istnieje"
+"Consent Edit","Edycja Zgody"
+"New Consent","Nowa Zgoda"
+"Consent Form Element has been deleted.","Element formularza zgody został usunięty."
+"Consent Form Element no longer exists.","Element formularza zgody już nie istnieje."
+"Consent Form Element Edit","Edycja elementu formularza zgody"
+"New Consent Form Element","Nowy element formularza zgody"
+"Consent Form Elements","Elementy formularza zgody"
+"A total of %1 record(s) has been deleted.","Usunięto wiersze: %1"
+"Consent Form Element has been saved.","Element formularza został zapisany."
+"Something went wrong while saving Consent Form Element.","Coś poszło nie tak podczas zapisywania zgody."
+Consents,Zgody
+"Consent has been saved.","Zgoda została zapisana."
+"Consent with this name or ExpertSender CDP ID already exists.","Zgoda z tą nazwą lub ID z ExpertSender CDP już istnieje."
+"Something went wrong while saving consent.","Coś poszło nie tak podczas zapisywania zgody."
+"Custom field mapping has been deleted.","Mapowanie cech zostało usunięte."
+"Attribute mapping no longer exists.","Mapowanie cech już nie istnieje."
+"Edit Attribute Mapping","Edycja mapowania cech"
+"New Attribute Mapping","Nowe mapowanie cech"
+"Attribute Mappings","Mapowania cech"
+"Attribute mapping has been saved.","Mapowanie cech zostało zapisane."
+"Field mapping with ECDP attribute ""%1"" already exists for store ID ""%2""","Mapowanie pól z cechą ECDP ""%1"" już istnieje dla ID sklepu ""%2"""
+"Something went wrong while saving attribute mapping.","Coś poszło nie tak podczas zapisywania mapowania cech."
+"Order Status Mapping has been deleted.","Mapowanie statusów zamówienia zostało usunięte."
+"Order Status Mapping no longer exists.","Mapowanie statusów zamówienia już nie istnieje."
+"Order Status Mapping Edit","Edycja mapowania statusów zamówienia"
+"New Order Status Mapping","Nowe mapowanie statusów zamówienia"
+"Order Status Mappings","Mapowania statusów zamówienia"
+"Order Status Mapping has been saved.","Mapowanie statusów zamówienia zostało zapisane."
+"Something went wrong while saving Order Status Mapping.","Coś poszło nie tak podczas zapisywania mapowania statusów zamówienia."
+"Consents have been saved.","Zgody zostały zapisane."
+"Something went wrong while saving consents.","Coś poszło nie tak podczas zapisywania zgód."
+"Your subscription has been saved.","Twoja subskrybcja została zapisana."
+"Something went wrong while saving Cron schedule.","Something went wrong while saving Cron schedule."
+"Single Opt-In","Single Opt-In"
+"Double Opt-In","Double Opt-In"
+"ID","ID"
+"SKU","SKU"
+"Billing address","Adres rozliczeniowy"
+"Shipping address","Adres dostawy"
+Registration,Rejestracja
+"Profile Edit","Edycja profilu"
+Checkout,Strona płatności
+Newsletter,Newsletter
+"Consent Form Element with ID ""%1"" does not exist.","Element formularza z ID ""%1"" nie istnieje."
+"Consent Form Element with consent ID ""%1"" already exists for store ID ""%2"".","Element formularza z ID zgody ""%1"" już istnieje dla ID sklepu ""%2""."
+"Consent with ID ""%1"" does not exist.","Zgoda z ID ""%1"" nie istnieje."
+Customer,Użytkownik
+Product,Produkt
+Order,Zamówienie
+"Field mapping with ID ""%1"" does not exist.","Mapowanie pól z ID ""%1"" nie istnieje."
+"Post request exception: %1","Post request exception: %1"
+"Put request exception: %1","Put request exception: %1"
+"Get request exception: %1","Get request exception: %1"
+Placed,Złożone
+Paid,Opłacone
+Completed,Zrealizowane
+Canceled,Anulowane
+"Order Status Mapping with ID ""%1"" does not exist.","Mapowanie statusów zamówienia z ID ""%1"" nie istnieje."
+"Task with ID ""%1"" does not exist.","Task with ID ""%1"" does not exist."
+"'Customer synchronization error | ' .","'Customer synchronization error | ' ."
+"'Guest customer synchronization error | ' .","'Guest customer synchronization error | ' ."
+"'Customer fetch error | ' .","'Customer fetch error | ' ."
+"Error while order status update | No status mapping found for Magento status ""%1""","Error while order status update | No status mapping found for Magento status ""%1"""
+"'Order add synchronization error | ' .","'Order add synchronization error | ' ."
+"'Order update synchronization error | ' .","'Order update synchronization error | ' ."
+"'Order status update synchronization error | ' .","'Order status update synchronization error | ' ."
+"'Customer consents fetch error | ' .","'Customer consents fetch error | ' ."
+"'Customer attributes fetch error | ' .","'Customer attributes fetch error | ' ."
+"'Product attributes fetch error | ' .","'Product attributes fetch error | ' ."
+"'Order attributes fetch error | ' .","'Order attributes fetch error | ' ."
+Edit,Edytuj
+"Are you sure you want to delete this record?","Czy na pewno chcesz usunąć ten wiersz?"
+Yes,Tak
+No,Nie
+"You can change form single/double opt-in settings","Możesz zmienić ustawienia single/double opt-in dla formularzy"
+here,tutaj
+"There are no consents yet.","Nie ma żadnych zgód."
+"Customer Consents","Zgody"
+"Enter your email address","Wpisz swój adres email"
+Subscribe,Zapisz się
+ExpertSender,ExpertSender
+"Custom Field Mappings","Mapowania pól"
+View,Widok
+"ExpertSender Settings","Ustawienia ExpertSender"
+"General Settings","Ustawienia ogólne"
+"Form Settings","Ustawienia formularzy"
+Mappings,Mapowania
+Settings,Ustawienia
+"Endora ExpertSender CDP","Endora ExpertSender CDP"
+"General Configuration","Konfiguracja ogólna"
+"Api Key","Klucz API"
+"How to find your API key in the ExpertSender CDP platform:<br>1. Log in to the platform.<br>2. Select the business unit.<br>3. In the main menu, find the Settings -> API section.<br>4. Copy the API key and paste it into the plugin settings.","Gdzie znajdę klucz API w platformie ExpertSender?<br>1. Zaloguj się do platormy.<br>2. Wybierz odpowiednią jednostkę biznesową.<br>3. W menu bocznym znajdź sekcję Ustawienia -> API. <br>4. Skopiuj klucz i wklej do ustawień wtyczki."
+"Track traffic on site","Śledzenie ruchu na stronie"
+"Web tracking code","Kod śledzący"
+"How to find the tracking code in the Expertsender CDP platform:<br>1. In the main menu, find the Settings -> Web Tracking section.<br>2. Select the relevant website and click 'Tracking code'.<br>3. Copy the code and paste it into plugin settings.","Gdzie znajdę kod śledzący w platformie ExpertSender CDP?:<br>1. W menu bocznym znajdź sekcję Ustawienia -> Web Tracking.<br>2. Wybierz odpowiednią  stronę i kliknij 'Kod śledzący'.<br>3. Skopiuj kod i wklej do ustawień wtyczki."
+"Website ID","ID strony internetowej"
+"How to find the website ID in the ExpertSender CDP platform:<br>1. In the main menu, go to Settings -> Web tracking <br>2. In the Websites tab, find the appropriate website. <br>3. Check the website ID number.<br>4. Enter the website number into plugin settings.","Gdzie znajdę ID strony internetowej, w platformie ExpertSender?:<br>1. Przejść do zakładki Settings -> Webtracking<br>2. W zakładce 'Websites' znaleźć odpowiednią stronę internetową, skopiować ID i wkleić w ustawieniach wtyczki"
+"Enable API Log","Włącz log API"
+"Cron Configuration","Cron Configuration"
+"Order synchronization interval","Order synchronization interval"
+"Interval in minutes in 1-59 range","Interval in minutes in 1-59 range"
+"Order synchronization max attempts","Order synchronization max attempts"
+"Customer synchronization interval","Customer synchronization interval"
+"Customer synchronization max attempts","Customer synchronization max attempts"
+"Customer data","Dane klientów"
+"Address from which customer phone number is collected","Adres, z którego pobierany jest numer telefonu klienta"
+"Send customer phone number","Przesyłanie numeru telefonu klienta"
+"Order data","Dane zamówień"
+"Order identifier","Identyfikator zamówienia"
+Forms,Formularze
+General,Ogólne
+"Text to display before consents in forms","Tekst wyświetlany przed zgodami w formularzach"
+"Use ExpertSender CDP form","Używaj formularza ExpertSender CDP"
+"Single/Double Opt-In","Single/Double Opt-In"
+"If no message ID is provided for forms with Double Opt-In, default message will be sent to the customers.","Jeśli ID wiadomości nie zostanie uzupełnione dla formularza w trybie double opt-in, zostanie wysłana domyślna wiadomość potwierdzająca."
+"Registration Form Type","Rejestracja"
+"Registration Form Message ID","ID wiadomości dla rejestracji"
+"Profile Edit Form Type","Edycja profilu"
+"Profile Edit Form Message ID","ID wiadomości dla edycji profilu"
+"Checkout Form Type","Strona płatności"
+"Checkout Form Message ID","ID wiadomości dla strony płatności"
+"Newsletter Form Type","Newsletter"
+"Newsletter Form Message ID","ID wiadomości dla newslettera"
+Consent,Zgoda
+Name,Nazwa
+"Consent Form Element","Element formularza zgody"
+Content,Treść
+Form,Formularz
+Stores,Sklepy
+Enabled,Włączony
+"Sort Order","Kolejność sortowania"
+"Mass delete","Masowe usuwanie"
+"Are you sure you want to delete selected records?","Czy na pewno chcesz usunąć zaznaczone wiersze?"
+"ECDP Consent","Zgoda w ExpertSender CDP"
+"Attribute Mapping","Mapowanie cech"
+"Magento Field","Pole Magento"
+"ExpertSender CDP attribute","Cecha w ExpertSender CDP"
+"Relates to resource","Dotyczy zasobu"
+"ExpertSender Order Status","Status zamówienia w ExpertSender CDP"
+"Magento Order Statuses","Statusy zamówienia Magento"
+"Manage Consents","Zarządzaj zgodami"

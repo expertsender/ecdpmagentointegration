@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Manage Consents</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content.bottom">
+            <block class="Magento\Framework\View\Element\Template" name="endora_expertsender.customer_consents.manage" template="Endora_ExpertSenderCdp::customer-consents-manage.phtml" cacheable="false">
+                <block class="Magento\Framework\View\Element\Template" name="endora_expertsender.customer_consents" template="Endora_ExpertSenderCdp::form/customer-consents.phtml">
+                    <arguments>
+                        <argument name="view_model" xsi:type="object">Endora\ExpertSenderCdp\ViewModel\Account\Edit\CustomerConsents</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

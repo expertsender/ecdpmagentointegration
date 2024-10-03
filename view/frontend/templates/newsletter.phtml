@@ -1,0 +1,71 @@
+<?php
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package Endora_ExpertSenderCdp
+ */
+
+use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
+
+const URL = 'expertsender/customerconsents/subscribe';
+
+/** @var \Endora\ExpertSenderCdp\ViewModel\CustomerConsents */
+$viewModel = $block->getViewModel();
+$formElements = $viewModel->getFormElements();
+?>
+<?php if (count($formElements)): ?>
+    <div class="block newsletter">
+        <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+        <div class="content">
+            <form
+                class="form subscribe"
+                novalidate
+                action="<?= $block->escapeUrl($block->getUrl(URL, ['_secure' => true])) ?>"
+                method="post"
+                data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+                id="newsletter-validate-detail"
+            >
+                <?= $block->getBlockHtml('formkey'); ?>
+                <div class="field newsletter">
+                    <div class="control">
+                        <input
+                            name="email"
+                            type="email"
+                            id="newsletter"
+                            placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
+                            data-validate="{required:true, 'validate-email':true}"
+                        />
+                    </div>
+                </div>
+                <div class="field customer-consents">
+                    <?php foreach ($formElements as $formElement): ?>
+                        <?php $elementId = $viewModel->getElementId($formElement); ?>
+                        <div class="field choice">
+                            <input type="checkbox"
+                                name="<?= /** @noEscape */ ConsentFormElementInterface::INPUT_NAME; ?>[]"
+                                id="<?= $block->escapeHtmlAttr($elementId); ?>"
+                                value="<?= $block->escapeHtmlAttr(implode(',', $formElement->getConsentIds())); ?>"
+                                class="checbox"
+                                title="<?= $block->escapeHtmlAttr($formElement->getContent()); ?>"
+                                data-validate="{ 'validate-one-required-by-name': true }"
+                                <?php if ($viewModel->isAgreed($formElement)) { echo 'checked'; } ?>
+                            />
+                            <label for="<?= $block->escapeHtmlAttr($elementId); ?>" class="label">
+                                <span><?= /** @noEscape */ $formElement->getContent(); ?></span>
+                            </label>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="actions">
+                    <button
+                        class="action subscribe primary"
+                        title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
+                        type="submit"
+                    >
+                        <span><?= $block->escapeHtml(__('Subscribe')) ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php endif; ?>
