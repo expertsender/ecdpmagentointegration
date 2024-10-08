@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Api;
+namespace ExpertSender\Ecdp\Model\Api;
 
 class SettingsApi extends EcdpApi
 {
@@ -16,7 +16,7 @@ class SettingsApi extends EcdpApi
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function getCustomerConsents(int $storeId)
     {
@@ -28,7 +28,7 @@ class SettingsApi extends EcdpApi
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function getCustomerAttributes(int $storeId)
     {
@@ -40,7 +40,7 @@ class SettingsApi extends EcdpApi
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function getProductAttributes(int $storeId)
     {
@@ -52,7 +52,7 @@ class SettingsApi extends EcdpApi
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function getOrderAttributes(int $storeId)
     {

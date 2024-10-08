@@ -2,28 +2,28 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\FieldMapping;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\FieldMapping;
 
-use Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory;
+use ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface;
+use ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 
 class MassDelete extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::field_mapping_delete';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::field_mapping_delete';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory
      */
     protected $collectionFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface
      */
     protected $fieldMappingRepository;
 
@@ -34,8 +34,8 @@ class MassDelete extends Action
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory $collectionFactory
-     * @param \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
      * @param \Magento\Ui\Component\MassAction\Filter $filter
      */
     public function __construct(

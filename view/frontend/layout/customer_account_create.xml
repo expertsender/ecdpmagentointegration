@@ -3,16 +3,16 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
     xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="form.additional.info">
-            <block class="Magento\Framework\View\Element\Template" name="endora_expertsender_customer_consents" template="Endora_ExpertSenderCdp::form/customer-consents.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="endora_expertsender_customer_consents" template="ExpertSender_Ecdp::form/customer-consents.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Endora\ExpertSenderCdp\ViewModel\Registration\CustomerConsents</argument>
+                    <argument name="view_model" xsi:type="object">ExpertSender\Ecdp\ViewModel\Registration\CustomerConsents</argument>
                 </arguments>
             </block>
         </referenceContainer>

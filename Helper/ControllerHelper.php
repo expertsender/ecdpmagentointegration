@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Helper;
+namespace ExpertSender\Ecdp\Helper;
 
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Controller\Result\RedirectFactory;

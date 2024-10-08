@@ -2,25 +2,25 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Service;
+namespace ExpertSender\Ecdp\Service;
 
-use Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentInterface;
-use Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Exception\EESException;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer\ConsentsData;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Order;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Order\Status;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Product;
-use Endora\ExpertSenderCdp\Model\Config;
-use Endora\ExpertSenderCdp\Model\Config\OrderIdentifier;
-use Endora\ExpertSenderCdp\Model\Config\PhoneFromAddress;
+use ExpertSender\Ecdp\Api\ConsentRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentInterface;
+use ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface;
+use ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface;
+use ExpertSender\Ecdp\Exception\EESException;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer\ConsentsData;
+use ExpertSender\Ecdp\Model\Api\Dto\Order;
+use ExpertSender\Ecdp\Model\Api\Dto\Order\Status;
+use ExpertSender\Ecdp\Model\Api\Dto\Product;
+use ExpertSender\Ecdp\Model\Config;
+use ExpertSender\Ecdp\Model\Config\OrderIdentifier;
+use ExpertSender\Ecdp\Model\Config\PhoneFromAddress;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\Customer\Api\AddressRepositoryInterface;
@@ -43,7 +43,7 @@ class DataConverter
     protected $timezone;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface
      */
     protected $fieldMappingRepository;
 
@@ -58,7 +58,7 @@ class DataConverter
     protected $addressRepository;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentRepositoryInterface
      */
     protected $consentRepository;
 
@@ -68,12 +68,12 @@ class DataConverter
     protected $logger;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Config
+     * @var \ExpertSender\Ecdp\Model\Config
      */
     protected $config;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface
      */
     protected $orderStatusMappingRepository;
 
@@ -89,13 +89,13 @@ class DataConverter
 
     /**
      * @param \Magento\Framework\Stdlib\DateTime\TimezoneInterface $timezone
-     * @param \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
+     * @param \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Customer\Api\AddressRepositoryInterface $addressRepository
-     * @param \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface $consentRepository
+     * @param \ExpertSender\Ecdp\Api\ConsentRepositoryInterface $consentRepository
      * @param \Psr\Log\LoggerInterface $logger
-     * @param \Endora\ExpertSenderCdp\Model\Config $config
-     * @param \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
+     * @param \ExpertSender\Ecdp\Model\Config $config
+     * @param \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
      * @param \Magento\Eav\Api\AttributeRepositoryInterface $attributeRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
      */
@@ -125,7 +125,7 @@ class DataConverter
 
     /**
      * @param \Magento\Sales\Api\Data\OrderInterface $order
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Order
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Order
      */
     public function orderToDto(OrderInterface $order)
     {
@@ -166,7 +166,7 @@ class DataConverter
 
     /**
      * @param \Magento\Customer\Api\Data\CustomerInterface $customer
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer
      */
     public function customerToDto(
         CustomerInterface $customer,
@@ -221,7 +221,7 @@ class DataConverter
 
     /**
      * @param \Magento\Sales\Api\Data\OrderInterface $order
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Order\Status
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Order\Status
      */
     public function orderToStatusDto(OrderInterface $order)
     {
@@ -249,7 +249,7 @@ class DataConverter
     /**
      * @param \Magento\Customer\Api\Data\CustomerInterface $customer
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\ConsentsData
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer\ConsentsData
      */
     protected function getConsentsData(?array $customData, int $storeId)
     {

@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model;
+namespace ExpertSender\Ecdp\Model;
 
-use Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterface;
+use ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterface;
 use Magento\Framework\Model\AbstractModel;
 
 class OrderStatusMapping extends AbstractModel implements OrderStatusMappingInterface
@@ -20,7 +20,7 @@ class OrderStatusMapping extends AbstractModel implements OrderStatusMappingInte
      */
     protected function _construct()
     {
-        $this->_init(\Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping::class);
+        $this->_init(\ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping::class);
     }
 
     /**

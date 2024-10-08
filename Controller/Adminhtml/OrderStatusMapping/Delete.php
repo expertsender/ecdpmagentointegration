@@ -2,26 +2,26 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\OrderStatusMapping;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\OrderStatusMapping;
 
-use Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface;
+use ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 
 class Delete extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::order_status_mapping_delete';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::order_status_mapping_delete';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface
      */
     protected $orderStatusMappingRepository;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
+     * @param \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
      */
     public function __construct(
         OrderStatusMappingRepositoryInterface $orderStatusMappingRepository,

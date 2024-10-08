@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Plugin;
+namespace ExpertSender\Ecdp\Plugin;
 
-use Endora\ExpertSenderCdp\Model\FormsConfig;
-use Endora\ExpertSenderCdp\Service\TaskService;
+use ExpertSender\Ecdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Service\TaskService;
 use Magento\Checkout\Model\PaymentInformationManagement;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Exception\LocalizedException;
@@ -30,7 +30,7 @@ class SaveCustomerConsentsFromPayment
     protected $customerRepository;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Service\TaskService
+     * @var \ExpertSender\Ecdp\Service\TaskService
      */
     protected $taskService;
 
@@ -40,16 +40,16 @@ class SaveCustomerConsentsFromPayment
     protected $logger;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @var \ExpertSender\Ecdp\Model\FormsConfig
      */
     protected $formsConfig;
 
     /**
      * @param \Magento\Quote\Api\CartRepositoryInterface $quoteRepositoy
      * @param \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository
-     * @param \Endora\ExpertSenderCdp\Service\TaskService $taskService
+     * @param \ExpertSender\Ecdp\Service\TaskService $taskService
      * @param \Psr\Log\LoggerInterface $logger
-     * @param \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @param \ExpertSender\Ecdp\Model\FormsConfig
      */
     public function __construct(
         CartRepositoryInterface $quoteRepository,

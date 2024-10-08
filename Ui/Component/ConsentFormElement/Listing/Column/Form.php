@@ -2,25 +2,25 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column;
+namespace ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
 use Magento\Ui\Component\Listing\Columns\Column;
 
 class Form extends Column
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Consent\FormElement\Form
+     * @var \ExpertSender\Ecdp\Model\Consent\FormElement\Form
      */
     protected $form;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Consent\FormElement\Form $form
+     * @param \ExpertSender\Ecdp\Model\Consent\FormElement\Form $form
      */
-    public function __construct(\Endora\ExpertSenderCdp\Model\Consent\FormElement\Form $form)
+    public function __construct(\ExpertSender\Ecdp\Model\Consent\FormElement\Form $form)
     {
         $this->form = $form;
     }

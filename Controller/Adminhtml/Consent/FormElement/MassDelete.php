@@ -2,28 +2,28 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\Consent\FormElement;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\Consent\FormElement;
 
-use Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement\CollectionFactory;
+use ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent\FormElement\CollectionFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 
 class MassDelete extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::consent_form_element_delete';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::consent_form_element_delete';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement\CollectionFactory
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\Consent\FormElement\CollectionFactory
      */
     protected $collectionFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface
      */
     protected $consentFormElementRepository;
 
@@ -34,8 +34,8 @@ class MassDelete extends Action
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement\CollectionFactory $collectionFactory
-     * @param \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface $consentFormElementRepository
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Consent\FormElement\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface $consentFormElementRepository
      * @param \Magento\Ui\Component\MassAction\Filter $filter
      */
     public function __construct(

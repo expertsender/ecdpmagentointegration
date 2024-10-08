@@ -2,16 +2,16 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\CustomerConsents;
+namespace ExpertSender\Ecdp\Controller\CustomerConsents;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
-use Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper;
-use Endora\ExpertSenderCdp\Model\Consent\FormElement\Form;
-use Endora\ExpertSenderCdp\Model\FormsConfig;
-use Endora\ExpertSenderCdp\Service\TaskService;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Helper\ConsentFormElementHelper;
+use ExpertSender\Ecdp\Model\Consent\FormElement\Form;
+use ExpertSender\Ecdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Service\TaskService;
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -33,7 +33,7 @@ class Save extends Action
     protected $logger;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Service\TaskService
+     * @var \ExpertSender\Ecdp\Service\TaskService
      */
     protected $taskService;
 
@@ -43,12 +43,12 @@ class Save extends Action
     protected $formKeyValidator;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper
+     * @var \ExpertSender\Ecdp\Helper\ConsentFormElementHelper
      */
     protected $formElementHelper;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @var \ExpertSender\Ecdp\Model\FormsConfig
      */
     protected $formsConfig;
 
@@ -56,10 +56,10 @@ class Save extends Action
      * @param \Magento\Framework\App\Action\Context $context
      * @param \Magento\Customer\Model\Session $customerSession
      * @param \Psr\Log\LoggerInterface $logger
-     * @param \Endora\ExpertSenderCdp\Service\TaskService $taskService
+     * @param \ExpertSender\Ecdp\Service\TaskService $taskService
      * @param \Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator
-     * @param \Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper $formElementHelper
-     * @param \Endora\ExpertSenderCdp\Model\FormsConfig $formsConfig
+     * @param \ExpertSender\Ecdp\Helper\ConsentFormElementHelper $formElementHelper
+     * @param \ExpertSender\Ecdp\Model\FormsConfig $formsConfig
      */
     public function __construct(
         Context $context,

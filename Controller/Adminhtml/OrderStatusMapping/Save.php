@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\OrderStatusMapping;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\OrderStatusMapping;
 
-use Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterfaceFactory;
+use ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterfaceFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Exception\LocalizedException;
@@ -16,21 +16,21 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 class Save extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::order_status_mapping_edit';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::order_status_mapping_edit';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterfaceFactory
      */
     protected $orderStatusMappingFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface
      */
     protected $orderStatusMappingRepository;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterfaceFactory $orderStatusMappingFactory
-     * @param \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
+     * @param \ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterfaceFactory $orderStatusMappingFactory
+     * @param \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
      * @param \Magento\Backend\App\Action\Context $context
      */
     public function __construct(

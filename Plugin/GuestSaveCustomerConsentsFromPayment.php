@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Plugin;
+namespace ExpertSender\Ecdp\Plugin;
 
-use Endora\ExpertSenderCdp\Model\FormsConfig;
-use Endora\ExpertSenderCdp\Service\TaskService;
+use ExpertSender\Ecdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Service\TaskService;
 use Magento\Checkout\Model\GuestPaymentInformationManagement;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Quote\Api\Data\AddressInterface;
@@ -19,7 +19,7 @@ class GuestSaveCustomerConsentsFromPayment
 {
 
     /**
-     * @var \Endora\ExpertSenderCdp\Service\TaskService
+     * @var \ExpertSender\Ecdp\Service\TaskService
      */
     protected $taskService;
 
@@ -29,14 +29,14 @@ class GuestSaveCustomerConsentsFromPayment
     protected $logger;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @var \ExpertSender\Ecdp\Model\FormsConfig
      */
     protected $formsConfig;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Service\TaskService $taskService
+     * @param \ExpertSender\Ecdp\Service\TaskService $taskService
      * @param \Psr\Log\LoggerInterface $logger
-     * @param \Endora\ExpertSenderCdp\Model\FormsConfig $formsConfig
+     * @param \ExpertSender\Ecdp\Model\FormsConfig $formsConfig
      */
     public function __construct(
         TaskService $taskService,

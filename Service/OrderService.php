@@ -2,25 +2,25 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Service;
+namespace ExpertSender\Ecdp\Service;
 
-use Endora\ExpertSenderCdp\Exception\EESException;
-use Endora\ExpertSenderCdp\Model\Api\OrderApi;
-use Endora\ExpertSenderCdp\Service\DataConverter;
+use ExpertSender\Ecdp\Exception\EESException;
+use ExpertSender\Ecdp\Model\Api\OrderApi;
+use ExpertSender\Ecdp\Service\DataConverter;
 use Magento\Sales\Api\OrderRepositoryInterface;
 
 class OrderService
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\OrderApi
+     * @var \ExpertSender\Ecdp\Model\Api\OrderApi
      */
     protected $orderApi;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Service\DataConverter
+     * @var \ExpertSender\Ecdp\Service\DataConverter
      */
     protected $dataConverter;
 
@@ -30,8 +30,8 @@ class OrderService
     protected $orderRepository;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\OrderApi $orderApi
-     * @param \Endora\ExpertSenderCdp\Service\DataConverter $dataConverter
+     * @param \ExpertSender\Ecdp\Model\Api\OrderApi $orderApi
+     * @param \ExpertSender\Ecdp\Service\DataConverter $dataConverter
      * @param \Magento\Sales\Api\OrderRepositoryInterface $orderRepository
      */
     public function __construct(
@@ -47,7 +47,7 @@ class OrderService
     /**
      * @param int $orderId
      * @return bool
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function sendNewOrder(int $orderId)
     {
@@ -63,7 +63,7 @@ class OrderService
     /**
      * @param int $orderId
      * @return bool
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function sendOrderUpdate(int $orderId)
     {
@@ -89,7 +89,7 @@ class OrderService
 
     /**
      * @param int $orderId
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Order
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Order
      */
     public function getOrderDto(int $orderId)
     {

@@ -3,7 +3,7 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,7 +13,7 @@
             <uiComponent name="consent_form"/>
         </referenceContainer>
         <referenceContainer name="page.main.actions">
-            <block class="Endora\ExpertSenderCdp\Block\Adminhtml\Store\Switcher" name="store_switcher">
+            <block class="ExpertSender\Ecdp\Block\Adminhtml\Store\Switcher" name="store_switcher">
                 <action method="setUseConfirm">
                     <argument name="params" xsi:type="string">1</argument>
                 </action>

@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Api\Dto;
+namespace ExpertSender\Ecdp\Model\Api\Dto;
 
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer\ConsentsData;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer\ConsentsData;
 
 class Customer
 {
@@ -56,7 +56,7 @@ class Customer
     protected $customAttributes;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\ConsentsData
+     * @var \ExpertSender\Ecdp\Model\Api\Dto\Customer\ConsentsData
      */
     protected $consentsData;
 
@@ -237,7 +237,7 @@ class Customer
     }
 
     /**
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\ConsentsData
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer\ConsentsData
      */
     public function getConsentsData()
     {
@@ -245,7 +245,7 @@ class Customer
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\ConsentsData $consentsData
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Customer\ConsentsData $consentsData
      * @return self
      */
     public function setConsentsData(ConsentsData $consentsData)

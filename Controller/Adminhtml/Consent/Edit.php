@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\Consent;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\Consent;
 
-use Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface;
-use Endora\ExpertSenderCdp\Helper\ControllerHelper;
+use ExpertSender\Ecdp\Api\ConsentRepositoryInterface;
+use ExpertSender\Ecdp\Helper\ControllerHelper;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -16,7 +16,7 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Edit extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::consent_edit';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::consent_edit';
 
     /**
      * @var \Magento\Framework\View\Result\PageFactory
@@ -24,19 +24,19 @@ class Edit extends Action
     protected $pageFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentRepositoryInterface
      */
     protected $consentRepository;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Helper\ControllerHelper
+     * @var \ExpertSender\Ecdp\Helper\ControllerHelper
      */
     protected $controllerHelper;
 
     /**
      * @param \Magento\Framework\View\Result\PageFactory $pageFactory
-     * @param \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface $consentRepository
-     * @param \Endora\ExpertSenderCdp\Helper\ControllerHelper $controllerHelper
+     * @param \ExpertSender\Ecdp\Api\ConsentRepositoryInterface $consentRepository
+     * @param \ExpertSender\Ecdp\Helper\ControllerHelper $controllerHelper
      */
     public function __construct(
         PageFactory $pageFactory,
@@ -74,7 +74,7 @@ class Edit extends Action
 
         /** @var \Magento\Backend\Model\View\Result\Page */
         $resultPage = $this->pageFactory->create();
-        $resultPage->setActiveMenu('Endora_ExpertSenderCdp::consent');
+        $resultPage->setActiveMenu('ExpertSender_Ecdp::consent');
         $resultPage->getConfig()->getTitle()->prepend(
             $id ? __('Consent Edit') : __('New Consent')
         );

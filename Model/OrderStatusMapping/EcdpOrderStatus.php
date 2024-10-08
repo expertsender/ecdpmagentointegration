@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\OrderStatusMapping;
+namespace ExpertSender\Ecdp\Model\OrderStatusMapping;
 
 class EcdpOrderStatus
 {

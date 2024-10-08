@@ -3,7 +3,7 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -11,36 +11,36 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Endora_ExpertSenderCdp::expertsender" title="ExpertSender" translate="title" sortOrder="100">
-                    <resource id="Endora_ExpertSenderCdp::field_mapping" title="Custom Field Mappings" translate="title" sortOrder="10">
-                        <resource id="Endora_ExpertSenderCdp::field_mapping_index" title="View" translate="title" sortOrder="10"/>
-                        <resource id="Endora_ExpertSenderCdp::field_mapping_edit" title="Edit" translate="title" sortOrder="20"/>
-                        <resource id="Endora_ExpertSenderCdp::field_mapping_delete" title="Delete" translate="title" sortOrder="30"/>
+                <resource id="ExpertSender_Ecdp::expertsender" title="ExpertSender" translate="title" sortOrder="100">
+                    <resource id="ExpertSender_Ecdp::field_mapping" title="Custom Field Mappings" translate="title" sortOrder="10">
+                        <resource id="ExpertSender_Ecdp::field_mapping_index" title="View" translate="title" sortOrder="10"/>
+                        <resource id="ExpertSender_Ecdp::field_mapping_edit" title="Edit" translate="title" sortOrder="20"/>
+                        <resource id="ExpertSender_Ecdp::field_mapping_delete" title="Delete" translate="title" sortOrder="30"/>
                     </resource>
-                    <resource id="Endora_ExpertSenderCdp::order_status_mapping" title="Order Status Mappings" translate="title" sortOrder="20">
-                        <resource id="Endora_ExpertSenderCdp::order_status_mapping_index" title="View" translate="title" sortOrder="10"/>
-                        <resource id="Endora_ExpertSenderCdp::order_status_mapping_edit" title="Edit" translate="title" sortOrder="20"/>
-                        <resource id="Endora_ExpertSenderCdp::order_status_mapping_delete" title="Delete" translate="title" sortOrder="30"/>
+                    <resource id="ExpertSender_Ecdp::order_status_mapping" title="Order Status Mappings" translate="title" sortOrder="20">
+                        <resource id="ExpertSender_Ecdp::order_status_mapping_index" title="View" translate="title" sortOrder="10"/>
+                        <resource id="ExpertSender_Ecdp::order_status_mapping_edit" title="Edit" translate="title" sortOrder="20"/>
+                        <resource id="ExpertSender_Ecdp::order_status_mapping_delete" title="Delete" translate="title" sortOrder="30"/>
                     </resource>
-                    <resource id="Endora_ExpertSenderCdp::customer_consents" title="Customer Consents" translate="title" sortOrder="30">
-                        <resource id="Endora_ExpertSenderCdp::consent" title="Consents" translate="title" sortOrder="10">
-                            <resource id="Endora_ExpertSenderCdp::consent_index" title="View" translate="title" sortOrder="10"/>
-                            <resource id="Endora_ExpertSenderCdp::consent_edit" title="Edit" translate="title" sortOrder="20"/>
-                            <resource id="Endora_ExpertSenderCdp::consent_delete" title="Delete" translate="title" sortOrder="30"/>
+                    <resource id="ExpertSender_Ecdp::customer_consents" title="Customer Consents" translate="title" sortOrder="30">
+                        <resource id="ExpertSender_Ecdp::consent" title="Consents" translate="title" sortOrder="10">
+                            <resource id="ExpertSender_Ecdp::consent_index" title="View" translate="title" sortOrder="10"/>
+                            <resource id="ExpertSender_Ecdp::consent_edit" title="Edit" translate="title" sortOrder="20"/>
+                            <resource id="ExpertSender_Ecdp::consent_delete" title="Delete" translate="title" sortOrder="30"/>
                         </resource>
-                        <resource id="Endora_ExpertSenderCdp::consent_form_element" title="Consent Form Elements" translate="title" sortOrder="20">
-                            <resource id="Endora_ExpertSenderCdp::consent_form_element_index" title="View" translate="title" sortOrder="10"/>
-                            <resource id="Endora_ExpertSenderCdp::consent_form_element_edit" title="Edit" translate="title" sortOrder="20"/>
-                            <resource id="Endora_ExpertSenderCdp::consent_form_element_delete" title="Delete" translate="title" sortOrder="30"/>
+                        <resource id="ExpertSender_Ecdp::consent_form_element" title="Consent Form Elements" translate="title" sortOrder="20">
+                            <resource id="ExpertSender_Ecdp::consent_form_element_index" title="View" translate="title" sortOrder="10"/>
+                            <resource id="ExpertSender_Ecdp::consent_form_element_edit" title="Edit" translate="title" sortOrder="20"/>
+                            <resource id="ExpertSender_Ecdp::consent_form_element_delete" title="Delete" translate="title" sortOrder="30"/>
                         </resource>
                     </resource>
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Endora_ExpertSenderCdp::settings" title="ExpertSender Settings" translate="title" sortOrder="40">
-                                <resource id="Endora_ExpertSenderCdp::general_settings" title="General Settings" translate="title" sortOrder="10"/>
-                                <resource id="Endora_ExpertSenderCdp::form_settings" title="Form Settings" translate="title" sortOrder="20"/>
+                            <resource id="ExpertSender_Ecdp::settings" title="ExpertSender Settings" translate="title" sortOrder="40">
+                                <resource id="ExpertSender_Ecdp::general_settings" title="General Settings" translate="title" sortOrder="10"/>
+                                <resource id="ExpertSender_Ecdp::form_settings" title="Form Settings" translate="title" sortOrder="20"/>
                             </resource>
                         </resource>
                     </resource>

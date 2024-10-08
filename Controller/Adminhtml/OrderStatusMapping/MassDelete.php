@@ -2,28 +2,28 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\OrderStatusMapping;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\OrderStatusMapping;
 
-use Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping\CollectionFactory;
+use ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface;
+use ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping\CollectionFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 
 class MassDelete extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::order_status_mapping_delete';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::order_status_mapping_delete';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping\CollectionFactory
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping\CollectionFactory
      */
     protected $collectionFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface
      */
     protected $orderStatusMappingRepository;
 
@@ -34,8 +34,8 @@ class MassDelete extends Action
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping\CollectionFactory $collectionFactory
-     * @param \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
      * @param \Magento\Ui\Component\MassAction\Filter $filter
      */
     public function __construct(

@@ -2,22 +2,22 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Service;
+namespace ExpertSender\Ecdp\Service;
 
-use Endora\ExpertSenderCdp\Exception\EESException;
-use Endora\ExpertSenderCdp\Model\Api\ApiResponse;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Attribute;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Consent;
-use Endora\ExpertSenderCdp\Model\Api\SettingsApi;
+use ExpertSender\Ecdp\Exception\EESException;
+use ExpertSender\Ecdp\Model\Api\ApiResponse;
+use ExpertSender\Ecdp\Model\Api\Dto\Settings\Attribute;
+use ExpertSender\Ecdp\Model\Api\Dto\Settings\Consent;
+use ExpertSender\Ecdp\Model\Api\SettingsApi;
 use Magento\Framework\Serialize\SerializerInterface;
 
 class SettingsService
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\SettingsApi
+     * @var \ExpertSender\Ecdp\Model\Api\SettingsApi
      */
     protected $settingsApi;
 
@@ -47,7 +47,7 @@ class SettingsService
     protected $orderAttributes;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\SettingsApi $settingsApi
+     * @param \ExpertSender\Ecdp\Model\Api\SettingsApi $settingsApi
      * @param \Magento\Framework\Serialize\SerializerInterface $serializer
      */
     public function __construct(SettingsApi $settingsApi, SerializerInterface $serializer)
@@ -58,7 +58,7 @@ class SettingsService
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Consent[]
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Settings\Consent[]
      */
     public function getCustomerConsents(int $storeId)
     {
@@ -95,8 +95,8 @@ class SettingsService
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Attribute[]
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Settings\Attribute[]
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function getCustomerAttributes(int $storeId)
     {
@@ -124,8 +124,8 @@ class SettingsService
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Attribute[]
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Settings\Attribute[]
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function getProductAttributes(int $storeId)
     {
@@ -153,8 +153,8 @@ class SettingsService
 
     /**
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Attribute[]
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Settings\Attribute[]
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function getOrderAttributes(int $storeId)
     {
@@ -181,8 +181,8 @@ class SettingsService
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\ApiResponse $response
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Consent[]
+     * @param \ExpertSender\Ecdp\Model\Api\ApiResponse $response
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Settings\Consent[]
      */
     protected function getConsentsFromResponse(ApiResponse $response)
     {
@@ -202,8 +202,8 @@ class SettingsService
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\ApiResponse $response
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Attribute[]
+     * @param \ExpertSender\Ecdp\Model\Api\ApiResponse $response
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Settings\Attribute[]
      */
     protected function getAttributesFromResponse(ApiResponse $response)
     {
@@ -219,7 +219,7 @@ class SettingsService
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Settings\Attribute[] $attributes
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Settings\Attribute[] $attributes
      * @return array
      */
     protected function getAttributesOptions(array $attributes)

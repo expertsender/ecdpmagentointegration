@@ -2,23 +2,23 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Block;
+namespace ExpertSender\Ecdp\Block;
 
-use Endora\ExpertSenderCdp\Model\Config;
+use ExpertSender\Ecdp\Model\Config;
 
 class TrackingScript extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Config
+     * @var \ExpertSender\Ecdp\Model\Config
      */
     protected $config;
 
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Endora\ExpertSenderCdp\Model\Config $config
+     * @param \ExpertSender\Ecdp\Model\Config $config
      * @param array
      */
     public function __construct(

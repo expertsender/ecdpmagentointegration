@@ -2,26 +2,26 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Api;
+namespace ExpertSender\Ecdp\Api;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface ConsentFormElementRepositoryInterface
 {
     /**
      * @param int $id
-     * @return \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface
+     * @return \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function get(int $id);
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface $formElement
-     * @return \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface $formElement
+     * @return \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface
      * @throws \Magento\Framework\Exception\AlreadyExistsException
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\CouldNotSaveException
@@ -29,7 +29,7 @@ interface ConsentFormElementRepositoryInterface
     public function save(ConsentFormElementInterface $formElement);
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface $formElement
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface $formElement
      * @return bool
      * @throws \Magento\Framework\Exception\CouldNotDeleteException
      */
@@ -45,7 +45,7 @@ interface ConsentFormElementRepositoryInterface
 
     /**
      * @param \Magento\Framework\Api\SearchCriteriaInterface
-     * @return \Endora\ExpertSenderCdp\Api\ConsentFormElementSearchResultInterface
+     * @return \ExpertSender\Ecdp\Api\ConsentFormElementSearchResultInterface
      */
     public function getList(SearchCriteriaInterface $searchCriteria);
 }

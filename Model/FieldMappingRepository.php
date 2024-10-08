@@ -2,18 +2,18 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model;
+namespace ExpertSender\Ecdp\Model;
 
-use Endora\ExpertSenderCdp\Api\Data\FieldMappingInterface;
-use Endora\ExpertSenderCdp\Api\Data\FieldMappingInterfaceFactory;
-use Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\FieldMappingSearchResultInterfaceFactory;
-use Endora\ExpertSenderCdp\Model\FieldMapping\Entity;
-use Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping as FieldMappingResource;
-use Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory;
+use ExpertSender\Ecdp\Api\Data\FieldMappingInterface;
+use ExpertSender\Ecdp\Api\Data\FieldMappingInterfaceFactory;
+use ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface;
+use ExpertSender\Ecdp\Api\FieldMappingSearchResultInterfaceFactory;
+use ExpertSender\Ecdp\Model\FieldMapping\Entity;
+use ExpertSender\Ecdp\Model\ResourceModel\FieldMapping as FieldMappingResource;
+use ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessor;
 use Magento\Framework\Api\SearchCriteriaBuilderFactory;
 use Magento\Framework\Api\SearchCriteriaInterface;
@@ -26,22 +26,22 @@ use Magento\Framework\Exception\NoSuchEntityException;
 class FieldMappingRepository implements FieldMappingRepositoryInterface
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\FieldMappingInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\Data\FieldMappingInterfaceFactory
      */
     protected $fieldMappingFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping
      */
     protected $resource;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\FieldMappingSearchResultInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\FieldMappingSearchResultInterfaceFactory
      */
     protected $fieldMappingSearchResultFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory
      */
     protected $collectionFactory;
 
@@ -56,10 +56,10 @@ class FieldMappingRepository implements FieldMappingRepositoryInterface
     protected $collectionProcessor;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\FieldMappingInterfaceFactory $fieldMappingFactory
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping $resource
-     * @param \Endora\ExpertSenderCdp\Api\FieldMappingSearchResultInterfaceFactory $fieldMappingSearchResultFactory
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Api\Data\FieldMappingInterfaceFactory $fieldMappingFactory
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping $resource
+     * @param \ExpertSender\Ecdp\Api\FieldMappingSearchResultInterfaceFactory $fieldMappingSearchResultFactory
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory $collectionFactory
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
      * @param \Magento\Framework\Api\SearchCriteria\CollectionProcessor $collectionProcessor
      */

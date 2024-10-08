@@ -2,15 +2,15 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Setup;
+namespace ExpertSender\Ecdp\Setup;
 
-use Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterfaceFactory;
-use Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\OrderStatusMapping\EcdpOrderStatus;
-use Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping;
+use ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterfaceFactory;
+use ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface;
+use ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus;
+use ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\UpgradeDataInterface;
@@ -38,12 +38,12 @@ class UpgradeData implements UpgradeDataInterface
     ];
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface
      */
     protected $orderStatusMappingRepository;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterfaceFactory
      */
     protected $orderStatusMappingFactory;
 
@@ -58,8 +58,8 @@ class UpgradeData implements UpgradeDataInterface
     protected $storeManager;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
-     * @param \Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterfaceFactory $orderStatusMappingFactory
+     * @param \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
+     * @param \ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterfaceFactory $orderStatusMappingFactory
      * @param \Magento\Sales\Model\ResourceModel\Order\Status\Collection $orderStatusCollection
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      */

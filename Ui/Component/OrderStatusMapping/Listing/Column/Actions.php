@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column;
+namespace ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column;
 
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;

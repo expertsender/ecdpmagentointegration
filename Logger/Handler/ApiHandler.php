@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Logger\Handler;
+namespace ExpertSender\Ecdp\Logger\Handler;
 
-use Endora\ExpertSenderCdp\Model\Config;
+use ExpertSender\Ecdp\Model\Config;
 use Magento\Framework\Filesystem\DriverInterface;
 use Magento\Framework\Logger\Handler\Base;
 use Monolog\Logger;
@@ -30,7 +30,7 @@ class ApiHandler extends Base
     protected $enabled;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Config $config
+     * @param \ExpertSender\Ecdp\Model\Config $config
      * @param \Magento\Framework\Filesystem\DriverInterface $filesystem
      * @param string $filePath
      * @param string $fileName

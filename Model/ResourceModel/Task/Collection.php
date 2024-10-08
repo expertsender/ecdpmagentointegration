@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\ResourceModel\Task;
+namespace ExpertSender\Ecdp\Model\ResourceModel\Task;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
@@ -21,8 +21,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \Endora\ExpertSenderCdp\Model\Task::class,
-            \Endora\ExpertSenderCdp\Model\ResourceModel\Task::class
+            \ExpertSender\Ecdp\Model\Task::class,
+            \ExpertSender\Ecdp\Model\ResourceModel\Task::class
         );
     }
 }

@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping\Grid;
+namespace ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping\Grid;
 
-use Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterface;
+use ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterface;
 use Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult;
 
 class Collection extends SearchResult

@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Listing\Column;
+namespace ExpertSender\Ecdp\Ui\Component\FieldMapping\Listing\Column;
 
-use Endora\ExpertSenderCdp\Api\Data\FieldMappingInterface;
-use Endora\ExpertSenderCdp\Model\FieldMapping\Entity as FieldMappingEntity;
+use ExpertSender\Ecdp\Api\Data\FieldMappingInterface;
+use ExpertSender\Ecdp\Model\FieldMapping\Entity as FieldMappingEntity;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
@@ -16,12 +16,12 @@ use Magento\Ui\Component\Listing\Columns\Column;
 class Entity extends Column
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FieldMapping\Entity
+     * @var \ExpertSender\Ecdp\Model\FieldMapping\Entity
      */
     protected $fieldMappingEntity;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\FieldMapping\Entity $fieldMappingEntity
+     * @param \ExpertSender\Ecdp\Model\FieldMapping\Entity $fieldMappingEntity
      * @param \Magento\Framework\View\Element\UiComponentFactory $uiComponentFactory
      * @param array $components
      * @param array $data

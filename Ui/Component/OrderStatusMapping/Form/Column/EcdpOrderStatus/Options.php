@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Form\Column\EcdpOrderStatus;
+namespace ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Form\Column\EcdpOrderStatus;
 
-use Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\OrderStatusMapping\EcdpOrderStatus;
+use ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface;
+use ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Data\OptionSourceInterface;
 
@@ -20,7 +20,7 @@ class Options implements OptionSourceInterface
     protected $options;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface
      */
     protected $orderStatusMappingRepository;
 
@@ -30,14 +30,14 @@ class Options implements OptionSourceInterface
     protected $request;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\OrderStatusMapping\EcdpOrderStatus
+     * @var \ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus
      */
     protected $ecdpOrderStatus;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
+     * @param \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
      * @param \Magento\Framework\App\RequestInterface $request
-     * @param \Endora\ExpertSenderCdp\Model\OrderStatusMapping\EcdpOrderStatus $ecdpOrderStatus
+     * @param \ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus $ecdpOrderStatus
      */
     public function __construct(
         OrderStatusMappingRepositoryInterface $orderStatusMappingRepository,

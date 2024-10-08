@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Block\Adminhtml;
+namespace ExpertSender\Ecdp\Block\Adminhtml;
 
 use Magento\Backend\Block\Widget\Context;
 use Magento\Framework\App\RequestInterface;

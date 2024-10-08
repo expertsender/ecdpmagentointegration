@@ -2,31 +2,31 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Consent;
+namespace ExpertSender\Ecdp\Model\Consent;
 
-use Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper;
-use Endora\ExpertSenderCdp\Model\FormsConfig;
-use Endora\ExpertSenderCdp\Model\Consent\FormElement\Form;
+use ExpertSender\Ecdp\Helper\ConsentFormElementHelper;
+use ExpertSender\Ecdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Model\Consent\FormElement\Form;
 use Magento\Checkout\Model\ConfigProviderInterface;
 
 class CheckoutConfigProvider implements ConfigProviderInterface
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper
+     * @var \ExpertSender\Ecdp\Helper\ConsentFormElementHelper
      */
     protected $helper;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @var \ExpertSender\Ecdp\Model\FormsConfig
      */
     protected $formsConfig;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper $helper
-     * @param \Endora\ExpertSenderCdp\Model\FormsConfig $formsConfig
+     * @param \ExpertSender\Ecdp\Helper\ConsentFormElementHelper $helper
+     * @param \ExpertSender\Ecdp\Model\FormsConfig $formsConfig
      */
     public function __construct(ConsentFormElementHelper $helper, FormsConfig $formsConfig)
     {

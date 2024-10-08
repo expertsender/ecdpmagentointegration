@@ -2,15 +2,15 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model;
+namespace ExpertSender\Ecdp\Model;
 
-use Endora\ExpertSenderCdp\Exception\EESException;
-use Endora\ExpertSenderCdp\Model\Api\ApiResponse;
+use ExpertSender\Ecdp\Exception\EESException;
+use ExpertSender\Ecdp\Model\Api\ApiResponse;
 use \Magento\Framework\HTTP\Client\Curl;
-use \Endora\ExpertSenderCdp\Model\Config;
+use \ExpertSender\Ecdp\Model\Config;
 use Magento\Framework\Serialize\SerializerInterface;
 use Psr\Log\LoggerInterface;
 
@@ -20,7 +20,7 @@ use Psr\Log\LoggerInterface;
 class HttpClient extends Curl
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Config
+     * @var \ExpertSender\Ecdp\Model\Config
      */
     protected $config;
 
@@ -40,7 +40,7 @@ class HttpClient extends Curl
     protected $sslVersion;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Config $config
+     * @param \ExpertSender\Ecdp\Model\Config $config
      * @param \Magento\Framework\Serialize\SerializerInterface $serializer
      * @param \Psr\Log\LoggerInterface $logger
      * @param int|null $sslVersion
@@ -62,8 +62,8 @@ class HttpClient extends Curl
      * @param array $data
      * @param int $storeId
      * @param array $headers
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function makePost(string $endpoint, array $data, int $storeId, array $headers = [])
     {
@@ -85,8 +85,8 @@ class HttpClient extends Curl
      * @param array $data
      * @param int $storeId
      * @param array $headers
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function makePut(string $endpoint, array $data, int $storeId, array $headers = [])
     {
@@ -107,8 +107,8 @@ class HttpClient extends Curl
      * @param string $endpoint
      * @param int $storeId
      * @param array $headers
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function makeGet(string $endpoint, int $storeId, array $headers = [])
     {

@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column\EcdpOrderStatus;
+namespace ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column\EcdpOrderStatus;
 
-use Endora\ExpertSenderCdp\Model\OrderStatusMapping\EcdpOrderStatus;
+use ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus;
 use Magento\Framework\Data\OptionSourceInterface;
 
 class Options implements OptionSourceInterface
@@ -18,12 +18,12 @@ class Options implements OptionSourceInterface
     protected $options;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\OrderStatusMapping\EcdpOrderStatus
+     * @var \ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus
      */
     protected $ecdpOrderStatus;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\OrderStatusMapping\EcdpOrderStatus $ecdpOrderStatus
+     * @param \ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus $ecdpOrderStatus
      */
     public function __construct(EcdpOrderStatus $ecdpOrderStatus)
     {

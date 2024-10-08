@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Block\Adminhtml\ConsentFormElement;
+namespace ExpertSender\Ecdp\Block\Adminhtml\ConsentFormElement;
 
-use Endora\ExpertSenderCdp\Block\Adminhtml\AbstractSaveButton;
+use ExpertSender\Ecdp\Block\Adminhtml\AbstractSaveButton;
 
 class SaveButton extends AbstractSaveButton
 {

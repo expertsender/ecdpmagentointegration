@@ -2,20 +2,20 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\ViewModel;
+namespace ExpertSender\Ecdp\ViewModel;
 
-use Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
-use Endora\ExpertSenderCdp\Api\Data\TaskInterface;
-use Endora\ExpertSenderCdp\Api\TaskRepositoryInterface;
-use Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent;
-use Endora\ExpertSenderCdp\Model\FormsConfig;
-use Endora\ExpertSenderCdp\Model\Consent\FormElement\Form;
-use Endora\ExpertSenderCdp\Service\CustomerService;
+use ExpertSender\Ecdp\Api\ConsentRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Api\Data\TaskInterface;
+use ExpertSender\Ecdp\Api\TaskRepositoryInterface;
+use ExpertSender\Ecdp\Helper\ConsentFormElementHelper;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent;
+use ExpertSender\Ecdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Model\Consent\FormElement\Form;
+use ExpertSender\Ecdp\Service\CustomerService;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Customer\Model\Session;
 use Magento\Framework\Api\SearchCriteriaBuilderFactory;
@@ -40,22 +40,22 @@ class CustomerConsents implements ArgumentInterface
     protected $customerRepository;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent[]
+     * @var \ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent[]
      */
     protected $customerConsents;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @var \ExpertSender\Ecdp\Model\FormsConfig
      */
     protected $formsConfig;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper $helper
+     * @var \ExpertSender\Ecdp\Helper\ConsentFormElementHelper $helper
      */
     protected $helper;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Service\CustomerService
+     * @var \ExpertSender\Ecdp\Service\CustomerService
      */
     protected $customerService;
 
@@ -65,7 +65,7 @@ class CustomerConsents implements ArgumentInterface
     protected $logger;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\TaskRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\TaskRepositoryInterface
      */
     protected $taskRepository;
 
@@ -75,25 +75,25 @@ class CustomerConsents implements ArgumentInterface
     protected $searchCriteriaBuilderFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\TaskInterface[]
+     * @var \ExpertSender\Ecdp\Api\Data\TaskInterface[]
      */
     protected $customerTasks;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentRepositoryInterface
      */
     protected $consentRepository;
 
     /**
      * @param \Magento\Customer\Model\Session $customerSession
      * @param \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository
-     * @param \Endora\ExpertSenderCdp\Model\FormsConfig $formsConfig
-     * @param \Endora\ExpertSenderCdp\Helper\ConsentFormElementHelper $helper
-     * @param \Endora\ExpertSenderCdp\Service\CustomerService $customerService
+     * @param \ExpertSender\Ecdp\Model\FormsConfig $formsConfig
+     * @param \ExpertSender\Ecdp\Helper\ConsentFormElementHelper $helper
+     * @param \ExpertSender\Ecdp\Service\CustomerService $customerService
      * @param \Psr\Log\LoggerInterface $logger
-     * @param \Endora\ExpertSenderCdp\Api\TaskRepositoryInterface $taskRepository
+     * @param \ExpertSender\Ecdp\Api\TaskRepositoryInterface $taskRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
-     * @param \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface $consentRepository
+     * @param \ExpertSender\Ecdp\Api\ConsentRepositoryInterface $consentRepository
      * @param string $form
      */
     public function __construct(
@@ -121,7 +121,7 @@ class CustomerConsents implements ArgumentInterface
     }
 
     /**
-     * @return \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface[]
+     * @return \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface[]
      */
     public function getFormElements()
     {
@@ -130,7 +130,7 @@ class CustomerConsents implements ArgumentInterface
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface $formElement
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface $formElement
      * @return string
      */
     public function getElementId(ConsentFormElementInterface $formElement)
@@ -139,7 +139,7 @@ class CustomerConsents implements ArgumentInterface
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface $formElement
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface $formElement
      * @return bool
      */
     public function isAgreed(ConsentFormElementInterface $formElement)
@@ -158,7 +158,7 @@ class CustomerConsents implements ArgumentInterface
             }
 
             $assignedConsent = array_filter($this->getCustomerConsents(), function ($consent) use ($ecdpConsentId) {
-                /** @var \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent $consent */
+                /** @var \ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent $consent */
                 return ((int) $ecdpConsentId === $consent->getId() && Consent::VALUE_TRUE === $consent->getValue());
             });
 
@@ -183,7 +183,7 @@ class CustomerConsents implements ArgumentInterface
     }
 
     /**
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent[]
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent[]
      */
     public function getCustomerConsents()
     {
@@ -208,7 +208,7 @@ class CustomerConsents implements ArgumentInterface
     }
 
     /**
-     * @return \Endora\ExpertSenderCdp\Api\Data\TaskInterface[]
+     * @return \ExpertSender\Ecdp\Api\Data\TaskInterface[]
      */
     public function getCustomerTasks()
     {

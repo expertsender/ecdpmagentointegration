@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Observer\Order;
+namespace ExpertSender\Ecdp\Observer\Order;
 
-use Endora\ExpertSenderCdp\Observer\AbstractTaskObserver;
+use ExpertSender\Ecdp\Observer\AbstractTaskObserver;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Exception\LocalizedException;
 

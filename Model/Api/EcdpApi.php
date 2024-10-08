@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Api;
+namespace ExpertSender\Ecdp\Model\Api;
 
-use Endora\ExpertSenderCdp\Model\Config;
-use Endora\ExpertSenderCdp\Model\HttpClient;
+use ExpertSender\Ecdp\Model\Config;
+use ExpertSender\Ecdp\Model\HttpClient;
 
 abstract class EcdpApi
 {
@@ -18,12 +18,12 @@ abstract class EcdpApi
     protected const BASE_URL = 'https://api.ecdp.app/';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\HttpClient
+     * @var \ExpertSender\Ecdp\Model\HttpClient
      */
     protected $httpClient;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Config
+     * @var \ExpertSender\Ecdp\Model\Config
      */
     protected $config;
 

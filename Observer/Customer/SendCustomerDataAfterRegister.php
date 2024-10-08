@@ -2,15 +2,15 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Observer\Customer;
+namespace ExpertSender\Ecdp\Observer\Customer;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
-use Endora\ExpertSenderCdp\Model\FormsConfig;
-use Endora\ExpertSenderCdp\Observer\AbstractTaskObserver;
-use Endora\ExpertSenderCdp\Service\TaskService;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Observer\AbstractTaskObserver;
+use ExpertSender\Ecdp\Service\TaskService;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Exception\LocalizedException;
 use Psr\Log\LoggerInterface;
@@ -18,13 +18,13 @@ use Psr\Log\LoggerInterface;
 class SendCustomerDataAfterRegister extends AbstractTaskObserver
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @var \ExpertSender\Ecdp\Model\FormsConfig
      */
     protected $formsConfig;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\FormsConfig $formsConfig
-     * @param \Endora\ExpertSenderCdp\Service\TaskService $taskService
+     * @param \ExpertSender\Ecdp\Model\FormsConfig $formsConfig
+     * @param \ExpertSender\Ecdp\Service\TaskService $taskService
      * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(

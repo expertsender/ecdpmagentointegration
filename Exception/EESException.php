@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Exception;
+namespace ExpertSender\Ecdp\Exception;
 
 use Magento\Framework\Exception\LocalizedException;
 

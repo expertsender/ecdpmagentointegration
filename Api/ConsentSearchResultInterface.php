@@ -2,22 +2,22 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Api;
+namespace ExpertSender\Ecdp\Api;
 
 use Magento\Framework\Api\SearchResultsInterface;
 
 interface ConsentSearchResultInterface extends SearchResultsInterface
 {
     /**
-     * @return \Endora\ExpertSenderCdp\Api\Data\ConsentInterface[]
+     * @return \ExpertSender\Ecdp\Api\Data\ConsentInterface[]
      */
     public function getItems();
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentInterface[] $items
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentInterface[] $items
      * @return void
      */
     public function setItems(array $items);

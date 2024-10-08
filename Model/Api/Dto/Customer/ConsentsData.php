@@ -2,15 +2,15 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Api\Dto\Customer;
+namespace ExpertSender\Ecdp\Model\Api\Dto\Customer;
 
 class ConsentsData
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent[]
+     * @var \ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent[]
      */
     protected $consents = [];
 
@@ -20,7 +20,7 @@ class ConsentsData
     protected $confirmationMessageId;
 
     /**
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent[]
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent[]
      */
     public function getConsents()
     {

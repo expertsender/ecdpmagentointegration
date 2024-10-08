@@ -2,22 +2,22 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Api;
+namespace ExpertSender\Ecdp\Api;
 
 use Magento\Framework\Api\SearchResultsInterface;
 
 interface OrderStatusMappingSearchResultInterface extends SearchResultsInterface
 {
     /**
-     * @return \Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterface[]
+     * @return \ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterface[]
      */
     public function getItems();
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterface[] $items
+     * @param \ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterface[] $items
      * @return void
      */
     public function setItems(array $items);

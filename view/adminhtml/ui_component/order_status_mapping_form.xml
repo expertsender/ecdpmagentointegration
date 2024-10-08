@@ -3,7 +3,7 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
@@ -16,9 +16,9 @@
     </argument>
     <settings>
         <buttons>
-            <button name="back" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericBackButton"/>
-            <button name="delete" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericDeleteButton"/>
-            <button name="save" class="Endora\ExpertSenderCdp\Block\Adminhtml\OrderStatusMapping\SaveButton"/>
+            <button name="back" class="ExpertSender\Ecdp\Block\Adminhtml\GenericBackButton"/>
+            <button name="delete" class="ExpertSender\Ecdp\Block\Adminhtml\GenericDeleteButton"/>
+            <button name="save" class="ExpertSender\Ecdp\Block\Adminhtml\OrderStatusMapping\SaveButton"/>
         </buttons>
         <namespace>order_status_mapping_form</namespace>
         <dataScope>data</dataScope>
@@ -35,7 +35,7 @@
         <settings>
             <submitUrl path="*/*/save"/>
         </settings>
-        <dataProvider name="order_status_mapping_form_data_source" class="Endora\ExpertSenderCdp\Model\OrderStatusMapping\DataProvider">
+        <dataProvider name="order_status_mapping_form_data_source" class="ExpertSender\Ecdp\Model\OrderStatusMapping\DataProvider">
             <settings>
                 <requestFieldName>id</requestFieldName>
                 <primaryFieldName>id</primaryFieldName>
@@ -56,7 +56,7 @@
             <formElements>
                 <select>
                     <settings>
-                        <options class="Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Form\Column\EcdpOrderStatus\Options"/>
+                        <options class="ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Form\Column\EcdpOrderStatus\Options"/>
                     </settings>
                 </select>
             </formElements>
@@ -72,7 +72,7 @@
             <formElements>
                 <multiselect>
                     <settings>
-                        <options class="Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Form\Column\MagentoOrderStatuses\Options"/>
+                        <options class="ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Form\Column\MagentoOrderStatuses\Options"/>
                     </settings>
                 </multiselect>
             </formElements>

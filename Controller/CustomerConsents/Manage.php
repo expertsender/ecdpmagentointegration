@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\CustomerConsents;
+namespace ExpertSender\Ecdp\Controller\CustomerConsents;
 
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Action;

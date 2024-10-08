@@ -2,34 +2,34 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Service;
+namespace ExpertSender\Ecdp\Service;
 
-use Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\TaskInterface;
-use Endora\ExpertSenderCdp\Api\Data\TaskInterfaceFactory;
-use Endora\ExpertSenderCdp\Api\TaskRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent;
-use Endora\ExpertSenderCdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Api\ConsentRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\TaskInterface;
+use ExpertSender\Ecdp\Api\Data\TaskInterfaceFactory;
+use ExpertSender\Ecdp\Api\TaskRepositoryInterface;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent;
+use ExpertSender\Ecdp\Model\FormsConfig;
 use Magento\Store\Model\StoreManagerInterface;
 use Psr\Log\LoggerInterface;
 
 class TaskService
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\TaskInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\Data\TaskInterfaceFactory
      */
     protected $taskFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\TaskRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\TaskRepositoryInterface
      */
     protected $taskRepository;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentRepositoryInterface
      */
     protected $consentRepository;
 
@@ -44,9 +44,9 @@ class TaskService
     protected $storeManager;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\TaskInterfaceFactory $taskFactory
-     * @param \Endora\ExpertSenderCdp\Api\TaskRepositoryInterface $taskRepository
-     * @param \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface $consentRepository
+     * @param \ExpertSender\Ecdp\Api\Data\TaskInterfaceFactory $taskFactory
+     * @param \ExpertSender\Ecdp\Api\TaskRepositoryInterface $taskRepository
+     * @param \ExpertSender\Ecdp\Api\ConsentRepositoryInterface $consentRepository
      * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      */
