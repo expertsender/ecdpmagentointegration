@@ -3,16 +3,16 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="endora_expertsender">
-        <job name="endora_expertsender_order_sync" instance="Endora\ExpertSenderCdp\Cron\OrderSync" method="execute">
+        <job name="endora_expertsender_order_sync" instance="ExpertSender\Ecdp\Cron\OrderSync" method="execute">
             <config_path>crontab/endora_expertsender/jobs/endora_expertsender_order_sync/schedule/cron_expr</config_path>
         </job>
-        <job name="endora_expertsender_customer_sync" instance="Endora\ExpertSenderCdp\Cron\CustomerSync" method="execute">
+        <job name="endora_expertsender_customer_sync" instance="ExpertSender\Ecdp\Cron\CustomerSync" method="execute">
             <config_path>crontab/endora_expertsender/jobs/endora_expertsender_customer_sync/schedule/cron_expr</config_path>
         </job>
     </group>

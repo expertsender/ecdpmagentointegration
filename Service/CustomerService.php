@@ -2,18 +2,18 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Service;
+namespace ExpertSender\Ecdp\Service;
 
-use Endora\ExpertSenderCdp\Exception\EESException;
-use Endora\ExpertSenderCdp\Model\Api\ApiResponse;
-use Endora\ExpertSenderCdp\Model\Api\CustomerApi;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer\Consent;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer\ConsentsData;
-use Endora\ExpertSenderCdp\Service\DataConverter;
+use ExpertSender\Ecdp\Exception\EESException;
+use ExpertSender\Ecdp\Model\Api\ApiResponse;
+use ExpertSender\Ecdp\Model\Api\CustomerApi;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer\Consent;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer\ConsentsData;
+use ExpertSender\Ecdp\Service\DataConverter;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Serialize\SerializerInterface;
@@ -21,12 +21,12 @@ use Magento\Framework\Serialize\SerializerInterface;
 class CustomerService
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\CustomerApi
+     * @var \ExpertSender\Ecdp\Model\Api\CustomerApi
      */
     protected $customerApi;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Service\DataConverter
+     * @var \ExpertSender\Ecdp\Service\DataConverter
      */
     protected $dataConverter;
 
@@ -41,8 +41,8 @@ class CustomerService
     protected $serializer;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\CustomerApi $customerApi
-     * @param \Endora\ExpertSenderCdp\Service\DataConverter $dataConverter
+     * @param \ExpertSender\Ecdp\Model\Api\CustomerApi $customerApi
+     * @param \ExpertSender\Ecdp\Service\DataConverter $dataConverter
      * @param \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository
      * @param \Magento\Framework\Serialize\SerializerInterface $serializer
      */
@@ -62,7 +62,7 @@ class CustomerService
      * @param int $customerId
      * @param array|null $customData
      * @return bool
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function sendNewCustomer(
         int $customerId,
@@ -83,7 +83,7 @@ class CustomerService
      * @param int $customerId
      * @param array|null $customData
      * @return bool
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function sendCustomerUpdate(
         int $customerId,
@@ -104,7 +104,7 @@ class CustomerService
      * @param array $customData
      * @param int $storeId
      * @return bool
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function sendGuestCustomerUpdate(array $customData, int $storeId)
     {
@@ -127,8 +127,8 @@ class CustomerService
     /**
      * @param string $email
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer
-     * @throws \Endora\ExpertSenderCdp\Exception\EESException
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer
+     * @throws \ExpertSender\Ecdp\Exception\EESException
      */
     public function getCustomer(string $email, int $storeId)
     {
@@ -144,7 +144,7 @@ class CustomerService
     /**
      * @param int $customerId
      * @param array|null $customData
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer
      */
     protected function getCustomerDto(
         int $customerId,
@@ -155,8 +155,8 @@ class CustomerService
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\ApiResponse $response
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer
+     * @param \ExpertSender\Ecdp\Model\Api\ApiResponse $response
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer
      */
     protected function getCustomerFromResponse(ApiResponse $response)
     {

@@ -2,28 +2,28 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\Consent;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\Consent;
 
-use Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent\CollectionFactory;
+use ExpertSender\Ecdp\Api\ConsentRepositoryInterface;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent\CollectionFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 
 class MassDelete extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::consent_delete';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::consent_delete';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\CollectionFactory
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\Consent\CollectionFactory
      */
     protected $collectionFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentRepositoryInterface
      */
     protected $consentRepository;
 
@@ -34,8 +34,8 @@ class MassDelete extends Action
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\CollectionFactory $collectionFactory
-     * @param \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface $consentRepository
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Consent\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Api\ConsentRepositoryInterface $consentRepository
      * @param \Magento\Ui\Component\MassAction\Filter $filter
      */
     public function __construct(

@@ -2,17 +2,17 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model;
+namespace ExpertSender\Ecdp\Model;
 
-use Endora\ExpertSenderCdp\Api\Data\TaskInterface;
-use Endora\ExpertSenderCdp\Api\Data\TaskInterfaceFactory;
-use Endora\ExpertSenderCdp\Api\TaskRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\TaskSearchResultInterfaceFactory;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Task as TaskResource;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Task\CollectionFactory;
+use ExpertSender\Ecdp\Api\Data\TaskInterface;
+use ExpertSender\Ecdp\Api\Data\TaskInterfaceFactory;
+use ExpertSender\Ecdp\Api\TaskRepositoryInterface;
+use ExpertSender\Ecdp\Api\TaskSearchResultInterfaceFactory;
+use ExpertSender\Ecdp\Model\ResourceModel\Task as TaskResource;
+use ExpertSender\Ecdp\Model\ResourceModel\Task\CollectionFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessor;
 use Magento\Framework\Api\SearchCriteriaBuilderFactory;
 use Magento\Framework\Api\SearchCriteriaInterface;
@@ -25,22 +25,22 @@ use Magento\Framework\Exception\NoSuchEntityException;
 class TaskRepository implements TaskRepositoryInterface
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\TaskInterface
+     * @var \ExpertSender\Ecdp\Api\Data\TaskInterface
      */
     protected $taskFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\Task
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\Task
      */
     protected $resource;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\TaskSearchResultInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\TaskSearchResultInterfaceFactory
      */
     protected $taskSearchResultFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory
      */
     protected $collectionFactory;
 
@@ -55,10 +55,10 @@ class TaskRepository implements TaskRepositoryInterface
     protected $collectionProcessor;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\TaskInterfaceFactory $taskFactory
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Task $resource
-     * @param \Endora\ExpertSenderCdp\Api\TaskSearchResultInterfaceFactory $taskSearchResultFactory
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Task\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Api\Data\TaskInterfaceFactory $taskFactory
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Task $resource
+     * @param \ExpertSender\Ecdp\Api\TaskSearchResultInterfaceFactory $taskSearchResultFactory
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Task\CollectionFactory $collectionFactory
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
      * @param \Magento\Framework\Api\SearchCriteria\CollectionProcessor $collectionProcessor
      */

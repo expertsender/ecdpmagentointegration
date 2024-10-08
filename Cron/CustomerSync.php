@@ -2,22 +2,22 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Cron;
+namespace ExpertSender\Ecdp\Cron;
 
-use Endora\ExpertSenderCdp\Api\Data\TaskInterface;
-use Endora\ExpertSenderCdp\Api\TaskRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\Config;
-use Endora\ExpertSenderCdp\Service\CustomerService;
+use ExpertSender\Ecdp\Api\Data\TaskInterface;
+use ExpertSender\Ecdp\Api\TaskRepositoryInterface;
+use ExpertSender\Ecdp\Model\Config;
+use ExpertSender\Ecdp\Service\CustomerService;
 use Magento\Framework\Api\SearchCriteriaBuilderFactory;
 use Psr\Log\LoggerInterface;
 
 class CustomerSync
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Api\TaskRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\TaskRepositoryInterface
      */
     protected $taskRepository;
 
@@ -27,12 +27,12 @@ class CustomerSync
     protected $searchCriteriaBuilderFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Service\CustomerService
+     * @var \ExpertSender\Ecdp\Service\CustomerService
      */
     protected $customerService;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Config
+     * @var \ExpertSender\Ecdp\Model\Config
      */
     protected $config;
 
@@ -42,10 +42,10 @@ class CustomerSync
     protected $logger;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\TaskRepositoryInterface $taskRepository
+     * @param \ExpertSender\Ecdp\Api\TaskRepositoryInterface $taskRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
-     * @param \Endora\ExpertSenderCdp\Service\CustomerService $customerService
-     * @param \Endora\ExpertSenderCdp\Model\Config $config
+     * @param \ExpertSender\Ecdp\Service\CustomerService $customerService
+     * @param \ExpertSender\Ecdp\Model\Config $config
      * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(

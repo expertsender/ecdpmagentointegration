@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Observer\Customer;
+namespace ExpertSender\Ecdp\Observer\Customer;
 
-use Endora\ExpertSenderCdp\Observer\AbstractTaskObserver;
-use Endora\ExpertSenderCdp\Service\TaskService;
+use ExpertSender\Ecdp\Observer\AbstractTaskObserver;
+use ExpertSender\Ecdp\Service\TaskService;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Exception\LocalizedException;
@@ -23,7 +23,7 @@ class SendCustomerDataAfterAccountEdit extends AbstractTaskObserver
 
     /**
      * @param \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository
-     * @param \Endora\ExpertSenderCdp\Service\TaskService $taskService
+     * @param \ExpertSender\Ecdp\Service\TaskService $taskService
      * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(

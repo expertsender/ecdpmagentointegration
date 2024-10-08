@@ -2,14 +2,14 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\Consent;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\Consent;
 
-use Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentInterfaceFactory;
+use ExpertSender\Ecdp\Api\ConsentRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentInterfaceFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Exception\AlreadyExistsException;
@@ -18,21 +18,21 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 class Save extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::consent_edit';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::consent_edit';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\ConsentInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\Data\ConsentInterfaceFactory
      */
     protected $consentFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentRepositoryInterface
      */
     protected $consentRepository;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentInterfaceFactory $consentFactory
-     * @param \Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface $consentRepository
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentInterfaceFactory $consentFactory
+     * @param \ExpertSender\Ecdp\Api\ConsentRepositoryInterface $consentRepository
      * @param \Magento\Backend\App\Action\Context $context
      */
     public function __construct(

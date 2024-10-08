@@ -2,18 +2,18 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Consent;
+namespace ExpertSender\Ecdp\Model\Consent;
 
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent\CollectionFactory;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent\CollectionFactory;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 
 class DataProvider extends AbstractDataProvider
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\Collection
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\Consent\Collection
      */
     protected $collection;
 
@@ -23,7 +23,7 @@ class DataProvider extends AbstractDataProvider
     protected $loadedData = [];
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Consent\CollectionFactory $collectionFactory
      * @param string $name
      * @param string $primaryFieldName
      * @param string $requestFieldName

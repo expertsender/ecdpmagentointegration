@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Form\Column\EcdpProductField;
+namespace ExpertSender\Ecdp\Ui\Component\FieldMapping\Form\Column\EcdpProductField;
 
-use Endora\ExpertSenderCdp\Service\SettingsService;
+use ExpertSender\Ecdp\Service\SettingsService;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Data\OptionSourceInterface;
 use Psr\Log\LoggerInterface;
@@ -15,7 +15,7 @@ use Psr\Log\LoggerInterface;
 class Options implements OptionSourceInterface
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Service\SettingsService
+     * @var \ExpertSender\Ecdp\Service\SettingsService
      */
     protected $settingsService;
 
@@ -35,7 +35,7 @@ class Options implements OptionSourceInterface
     protected $request;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Service\SettingsService $settingsService
+     * @param \ExpertSender\Ecdp\Service\SettingsService $settingsService
      * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(

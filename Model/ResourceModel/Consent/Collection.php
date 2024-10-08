@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\ResourceModel\Consent;
+namespace ExpertSender\Ecdp\Model\ResourceModel\Consent;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentInterface;
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
 class Collection extends AbstractCollection
@@ -22,8 +22,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \Endora\ExpertSenderCdp\Model\Consent::class,
-            \Endora\ExpertSenderCdp\Model\ResourceModel\Consent::class
+            \ExpertSender\Ecdp\Model\Consent::class,
+            \ExpertSender\Ecdp\Model\ResourceModel\Consent::class
         );
     }
 

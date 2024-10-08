@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Api\Dto;
+namespace ExpertSender\Ecdp\Model\Api\Dto;
 
 class Order
 {
@@ -25,12 +25,12 @@ class Order
     protected $totalValue;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\Dto\Customer
+     * @var \ExpertSender\Ecdp\Model\Api\Dto\Customer
      */
     protected $customer;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Api\Dto\Product[]
+     * @var \ExpertSender\Ecdp\Model\Api\Dto\Product[]
      */
     protected $products;
 
@@ -127,7 +127,7 @@ class Order
     }
 
     /**
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Customer
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Customer
      */
     public function getCustomer()
     {
@@ -135,10 +135,10 @@ class Order
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Customer $customer
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Customer $customer
      * @return self
      */
-    public function setCustomer(\Endora\ExpertSenderCdp\Model\Api\Dto\Customer $customer)
+    public function setCustomer(\ExpertSender\Ecdp\Model\Api\Dto\Customer $customer)
     {
         $this->customer = $customer;
 
@@ -146,7 +146,7 @@ class Order
     }
 
     /**
-     * @return \Endora\ExpertSenderCdp\Model\Api\Dto\Product[]
+     * @return \ExpertSender\Ecdp\Model\Api\Dto\Product[]
      */
     public function getProducts()
     {
@@ -154,7 +154,7 @@ class Order
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Product[] $products
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Product[] $products
      * @return self
      */
     public function setProducts(array $products)

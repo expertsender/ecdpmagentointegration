@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\FieldMapping\Form\Column\Entity;
+namespace ExpertSender\Ecdp\Ui\Component\FieldMapping\Form\Column\Entity;
 
-use Endora\ExpertSenderCdp\Model\FieldMapping\Entity;
+use ExpertSender\Ecdp\Model\FieldMapping\Entity;
 use Magento\Framework\Data\OptionSourceInterface;
 
 class Options implements OptionSourceInterface
@@ -18,12 +18,12 @@ class Options implements OptionSourceInterface
     protected $options;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FieldMapping\Entity
+     * @var \ExpertSender\Ecdp\Model\FieldMapping\Entity
      */
     protected $fieldMappingEntity;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\FieldMapping\Entity $fieldMappingEntity
+     * @param \ExpertSender\Ecdp\Model\FieldMapping\Entity $fieldMappingEntity
      */
     public function __construct(Entity $fieldMappingEntity)
     {

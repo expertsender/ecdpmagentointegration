@@ -2,23 +2,23 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Plugin;
+namespace ExpertSender\Ecdp\Plugin;
 
-use Endora\ExpertSenderCdp\Model\FormsConfig;
+use ExpertSender\Ecdp\Model\FormsConfig;
 use Magento\Newsletter\Block\Subscribe;
 
 class RemoveDefaultNewsletterBlock
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Model\FormsConfig
+     * @var \ExpertSender\Ecdp\Model\FormsConfig
      */
     protected $formsConfig;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Config $formsConfig
+     * @param \ExpertSender\Ecdp\Model\Config $formsConfig
      */
     public function __construct(FormsConfig $formsConfig)
     {

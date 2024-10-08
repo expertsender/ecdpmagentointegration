@@ -3,7 +3,7 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,7 +17,7 @@
             <class>separator-top</class>
             <label>Settings</label>
             <tab>endora_expertsender</tab>
-            <resource>Endora_ExpertSenderCdp::general_settings</resource>
+            <resource>ExpertSender_Ecdp::general_settings</resource>
             <group id="general" translate="label" type="text" sortOrder="10"
                 showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
@@ -31,12 +31,12 @@
                     showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Track traffic on site</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <backend_model>Endora\ExpertSenderCdp\Model\Config\TrackTrafficEnabled</backend_model>
+                    <backend_model>ExpertSender\Ecdp\Model\Config\TrackTrafficEnabled</backend_model>
                 </field>
                 <field id="track_traffic_script" translate="label comment" type="textarea" sortOrder="30"
                     showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Web tracking code</label>
-                    <backend_model>Endora\ExpertSenderCdp\Model\Config\TrackTrafficScript</backend_model>
+                    <backend_model>ExpertSender\Ecdp\Model\Config\TrackTrafficScript</backend_model>
                     <comment><![CDATA[How to find the tracking code in the Expertsender CDP platform:<br>1. In the main menu, find the Settings -> Web Tracking section.<br>2. Select the relevant website and click 'Tracking code'.<br>3. Copy the code and paste it into plugin settings.]]></comment>
                 </field>
                 <field id="website_id" translate="label comment" type="text" sortOrder="40"
@@ -56,7 +56,7 @@
                 <field id="order_sync_interval" translate="label comment" type="text" sortOrder="10"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Order synchronization interval</label>
-                    <backend_model>Endora\ExpertSenderCdp\Cron\Model\Config\OrderSyncInterval</backend_model>
+                    <backend_model>ExpertSender\Ecdp\Cron\Model\Config\OrderSyncInterval</backend_model>
                     <comment>Interval in minutes in 1-59 range</comment>
                     <validate>required-entry validate-number validate-digits-range digits-range-1-59</validate>
                 </field>
@@ -68,7 +68,7 @@
                 <field id="customer_sync_interval" translate="label comment" type="text" sortOrder="30"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Customer synchronization interval</label>
-                    <backend_model>Endora\ExpertSenderCdp\Cron\Model\Config\CustomerSyncInterval</backend_model>
+                    <backend_model>ExpertSender\Ecdp\Cron\Model\Config\CustomerSyncInterval</backend_model>
                     <comment>Interval in minutes in 1-59 range</comment>
                     <validate>required-entry validate-number validate-digits-range digits-range-1-59</validate>
                 </field>
@@ -83,7 +83,7 @@
                 <label>Customer data</label>
                 <field id="phone_from_address" translate="label" type="select" sortOrder="10"
                     showInDefault="1" showInWebsite="1" showInStore="1">
-                    <source_model>Endora\ExpertSenderCdp\Model\Config\PhoneFromAddress</source_model>
+                    <source_model>ExpertSender\Ecdp\Model\Config\PhoneFromAddress</source_model>
                     <label>Address from which customer phone number is collected</label>
                 </field>
                 <field id="send_customer_phone_enabled" translate="label" type="select" sortOrder="20"
@@ -98,7 +98,7 @@
                 <field id="order_identifier" translate="label" type="select" sortOrder="10"
                     showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Order identifier</label>
-                    <source_model>Endora\ExpertSenderCdp\Model\Config\OrderIdentifier</source_model>
+                    <source_model>ExpertSender\Ecdp\Model\Config\OrderIdentifier</source_model>
                 </field>
             </group>
         </section>
@@ -106,7 +106,7 @@
             <class>separator-top</class>
             <label>Forms</label>
             <tab>endora_expertsender</tab>
-            <resource>Endora_ExpertSenderCdp::form_settings</resource>
+            <resource>ExpertSender_Ecdp::form_settings</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="text_before_consents" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -115,7 +115,7 @@
                 <field id="use_custom_newsletter_form" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Use ExpertSender CDP form</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <backend_model>Endora\ExpertSenderCdp\Model\Config\UseCustomNewsletterForm</backend_model>
+                    <backend_model>ExpertSender\Ecdp\Model\Config\UseCustomNewsletterForm</backend_model>
                 </field>
             </group>
             <group id="form_type" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -123,7 +123,7 @@
                 <comment>If no message ID is provided for forms with Double Opt-In, default message will be sent to the customers.</comment>
                 <field id="registration_form_type" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Registration Form Type</label>
-                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                    <source_model>ExpertSender\Ecdp\Model\Config\FormType</source_model>
                 </field>
                 <field id="registration_form_message_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Registration Form Message ID</label>
@@ -134,7 +134,7 @@
                 </field>
                 <field id="profile_edit_form_type" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Profile Edit Form Type</label>
-                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                    <source_model>ExpertSender\Ecdp\Model\Config\FormType</source_model>
                 </field>
                 <field id="profile_edit_form_message_id" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Profile Edit Form Message ID</label>
@@ -145,7 +145,7 @@
                 </field>
                 <field id="checkout_form_type" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Checkout Form Type</label>
-                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                    <source_model>ExpertSender\Ecdp\Model\Config\FormType</source_model>
                 </field>
                 <field id="checkout_form_message_id" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Checkout Form Message ID</label>
@@ -156,7 +156,7 @@
                 </field>
                 <field id="newsletter_form_type" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Newsletter Form Type</label>
-                    <source_model>Endora\ExpertSenderCdp\Model\Config\FormType</source_model>
+                    <source_model>ExpertSender\Ecdp\Model\Config\FormType</source_model>
                 </field>
                 <field id="newsletter_form_message_id" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Newsletter Form Message ID</label>

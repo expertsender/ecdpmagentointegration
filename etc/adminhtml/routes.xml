@@ -3,14 +3,14 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
         <route id="expertsender" frontName="expertsender">
-            <module name="Endora_ExpertSenderCdp"/>
+            <module name="ExpertSender_Ecdp"/>
         </route>
     </router>
 </config>

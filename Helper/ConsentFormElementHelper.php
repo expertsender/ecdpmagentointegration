@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Helper;
+namespace ExpertSender\Ecdp\Helper;
 
-use Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
 use Magento\Framework\Api\SearchCriteriaBuilderFactory;
 use Magento\Framework\Api\SortOrderBuilder;
 use Magento\Store\Model\StoreManagerInterface;
@@ -31,7 +31,7 @@ class ConsentFormElementHelper
     protected $sortOrderBuilder;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface
      */
     protected $formElementRepository;
 
@@ -39,7 +39,7 @@ class ConsentFormElementHelper
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Framework\Api\SortOrderBuilder $sortOrderBuilder
-     * @param \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface $formElementRepository
+     * @param \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface $formElementRepository
      */
     public function __construct(
         SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory,

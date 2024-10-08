@@ -3,7 +3,7 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
@@ -18,7 +18,7 @@
             <dep>order_status_mapping_listing.order_status_mapping_listing_data_source</dep>
         </deps>
         <buttons>
-            <button name="add" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericAddButton"/>
+            <button name="add" class="ExpertSender\Ecdp\Block\Adminhtml\GenericAddButton"/>
         </buttons>
     </settings>
     <dataSource name="order_status_mapping_listing_data_source" component="Magento_Ui/js/grid/provider">
@@ -85,31 +85,31 @@
                 </item>
             </argument>
         </selectionsColumn>
-        <column name="ecdp_order_status" sortOrder="10" class="Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column\EcdpOrderStatus">
+        <column name="ecdp_order_status" sortOrder="10" class="ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column\EcdpOrderStatus">
             <settings>
                 <filter>select</filter>
-                <options class="Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column\EcdpOrderStatus\Options"/>
+                <options class="ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column\EcdpOrderStatus\Options"/>
                 <dataType>select</dataType>
                 <label translate="true">ExpertSender Order Status</label>
             </settings>
         </column>
-        <column name="magento_order_statuses" sortOrder="20" class="Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column\MagentoOrderStatuses">
+        <column name="magento_order_statuses" sortOrder="20" class="ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column\MagentoOrderStatuses">
             <settings>
                 <filter>select</filter>
-                <options class="Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column\MagentoOrderStatuses\Options"/>
+                <options class="ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column\MagentoOrderStatuses\Options"/>
                 <dataType>select</dataType>
                 <label translate="true">Magento Order Statuses</label>
             </settings>
         </column>
-        <column name="store" sortOrder="30" class="Endora\ExpertSenderCdp\Ui\Component\Generic\Listing\Column\Store">
+        <column name="store" sortOrder="30" class="ExpertSender\Ecdp\Ui\Component\Generic\Listing\Column\Store">
             <settings>
                 <filter>select</filter>
-                <options class="Endora\ExpertSenderCdp\Ui\Component\Generic\Listing\Column\Store\Options"/>
+                <options class="ExpertSender\Ecdp\Ui\Component\Generic\Listing\Column\Store\Options"/>
                 <dataType>select</dataType>
                 <label translate="true">Store</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column\Actions" sortOrder="100">
+        <actionsColumn name="actions" class="ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column\Actions" sortOrder="100">
             <settings>
                 <indexField>id</indexField>
             </settings>

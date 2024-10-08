@@ -2,15 +2,15 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\Consent\FormElement;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\Consent\FormElement;
 
-use Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterfaceFactory;
-use Endora\ExpertSenderCdp\Model\Consent\FormElement\Form;
+use ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterfaceFactory;
+use ExpertSender\Ecdp\Model\Consent\FormElement\Form;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Cache\TypeListInterface;
@@ -19,15 +19,15 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 class Save extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::consent_form_element_edit';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::consent_form_element_edit';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterfaceFactory
      */
     protected $consentFormElementFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface
      */
     protected $consentFormElementRepository;
 
@@ -37,8 +37,8 @@ class Save extends Action
     protected $cacheTypeList;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterfaceFactory $consentFormElementFactory
-     * @param \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface $consentFormElementRepository
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentFormElementInterfaceFactory $consentFormElementFactory
+     * @param \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface $consentFormElementRepository
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\App\Cache\TypeListInterface $cacheTypeList
      */

@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\FieldMapping;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\FieldMapping;
 
-use Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Helper\ControllerHelper;
+use ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface;
+use ExpertSender\Ecdp\Helper\ControllerHelper;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -16,7 +16,7 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Edit extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::field_mapping_edit';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::field_mapping_edit';
 
     /**
      * @var \Magento\Framework\View\Result\PageFactory
@@ -24,19 +24,19 @@ class Edit extends Action
     protected $pageFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface
      */
     protected $fieldMappingRepository;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Helper\ControllerHelper
+     * @var \ExpertSender\Ecdp\Helper\ControllerHelper
      */
     protected $controllerHelper;
 
     /**
      * @param \Magento\Framework\View\Result\PageFactory $pageFactory
-     * @param \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
-     * @param \Endora\ExpertSenderCdp\Helper\ControllerHelper $controllerHelper
+     * @param \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
+     * @param \ExpertSender\Ecdp\Helper\ControllerHelper $controllerHelper
      * @param \Magento\Backend\App\Action\Context $context
      */
     public function __construct(
@@ -75,7 +75,7 @@ class Edit extends Action
 
         /** @var \Magento\Backend\Model\View\Result\Page */
         $resultPage = $this->pageFactory->create();
-        $resultPage->setActiveMenu('Endora_ExpertSenderCdp::field_mapping');
+        $resultPage->setActiveMenu('ExpertSender_Ecdp::field_mapping');
         $resultPage->getConfig()->getTitle()->prepend(
             $id ? __('Edit Attribute Mapping') : __('New Attribute Mapping')
         );

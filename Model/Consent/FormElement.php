@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Consent;
+namespace ExpertSender\Ecdp\Model\Consent;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
 use Magento\Framework\Model\AbstractModel;
 
 class FormElement extends AbstractModel implements ConsentFormElementInterface
@@ -20,7 +20,7 @@ class FormElement extends AbstractModel implements ConsentFormElementInterface
      */
     protected function _construct()
     {
-        $this->_init(\Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement::class);
+        $this->_init(\ExpertSender\Ecdp\Model\ResourceModel\Consent\FormElement::class);
     }
 
     /**

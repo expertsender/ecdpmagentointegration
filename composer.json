@@ -1,6 +1,7 @@
 {
-    "name": "endora/expertsender-cdp",
+    "name": "expertsender/ecdp",
     "description": "Integration with ExpertSender CDP",
+    "version": "1.0.2",
     "license": "proprietary",
     "type": "magento2-module",
     "require": {
@@ -9,7 +10,7 @@
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
-            "Endora\\ExpertSenderCdp\\": ""
+            "ExpertSender\\Ecdp\\": ""
         }
     }
 }

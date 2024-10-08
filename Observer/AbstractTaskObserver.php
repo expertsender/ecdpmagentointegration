@@ -2,19 +2,19 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Observer;
+namespace ExpertSender\Ecdp\Observer;
 
-use Endora\ExpertSenderCdp\Service\TaskService;
+use ExpertSender\Ecdp\Service\TaskService;
 use Magento\Framework\Event\ObserverInterface;
 use Psr\Log\LoggerInterface;
 
 abstract class AbstractTaskObserver implements ObserverInterface
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Service\TaskService
+     * @var \ExpertSender\Ecdp\Service\TaskService
      */
     protected $taskService;
 
@@ -24,7 +24,7 @@ abstract class AbstractTaskObserver implements ObserverInterface
     protected $logger;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Service\TaskService $taskService
+     * @param \ExpertSender\Ecdp\Service\TaskService $taskService
      * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(TaskService $taskService, LoggerInterface $logger)

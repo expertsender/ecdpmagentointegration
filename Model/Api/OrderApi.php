@@ -2,14 +2,14 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Api;
+namespace ExpertSender\Ecdp\Model\Api;
 
-use Endora\ExpertSenderCdp\Model\Api\Dto\Order;
-use Endora\ExpertSenderCdp\Model\Api\Dto\Order\Status;
-use Endora\ExpertSenderCdp\Model\Api\EcdpApi;
+use ExpertSender\Ecdp\Model\Api\Dto\Order;
+use ExpertSender\Ecdp\Model\Api\Dto\Order\Status;
+use ExpertSender\Ecdp\Model\Api\EcdpApi;
 
 class OrderApi extends EcdpApi
 {
@@ -20,8 +20,8 @@ class OrderApi extends EcdpApi
     protected const MODE_REPLACE = 'Replace';
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Order $order
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Order $order
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function addOrder(Order $order)
     {
@@ -29,8 +29,8 @@ class OrderApi extends EcdpApi
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Order $order
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Order $order
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function addOrReplaceOrder(Order $order)
     {
@@ -38,8 +38,8 @@ class OrderApi extends EcdpApi
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Order $order
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Order $order
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function replaceOrder(Order $order)
     {
@@ -47,8 +47,8 @@ class OrderApi extends EcdpApi
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Order\Status $orderStatus
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Order\Status $orderStatus
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function updateOrderStatus(Status $orderStatus)
     {
@@ -69,9 +69,9 @@ class OrderApi extends EcdpApi
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Order $order
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Order $order
      * @param string $mode
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     protected function postOrder(Order $order, string $mode)
     {

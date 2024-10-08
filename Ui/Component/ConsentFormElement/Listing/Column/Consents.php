@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column;
+namespace ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent\Collection;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent\Collection;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
@@ -21,7 +21,7 @@ class Consents extends Column
     protected $options;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\Collection $consentCollection
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Consent\Collection $consentCollection
      * @param \Magento\Framework\View\Element\UiComponent\ContextInterface $context
      * @param \Magento\Framework\View\Element\UiComponentFactory $uiComponentFactory
      * @param array $components

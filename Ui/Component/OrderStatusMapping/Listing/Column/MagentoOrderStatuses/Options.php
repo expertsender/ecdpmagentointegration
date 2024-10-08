@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\OrderStatusMapping\Listing\Column\MagentoOrderStatuses;
+namespace ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column\MagentoOrderStatuses;
 
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Sales\Model\ResourceModel\Order\Status\Collection;

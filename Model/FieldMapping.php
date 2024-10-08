@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model;
+namespace ExpertSender\Ecdp\Model;
 
-use Endora\ExpertSenderCdp\Api\Data\FieldMappingInterface;
+use ExpertSender\Ecdp\Api\Data\FieldMappingInterface;
 use Magento\Framework\Model\AbstractModel;
 
 class FieldMapping extends AbstractModel implements FieldMappingInterface
@@ -20,7 +20,7 @@ class FieldMapping extends AbstractModel implements FieldMappingInterface
      */
     protected function _construct()
     {
-        $this->_init(\Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping::class);
+        $this->_init(\ExpertSender\Ecdp\Model\ResourceModel\FieldMapping::class);
     }
 
     /**

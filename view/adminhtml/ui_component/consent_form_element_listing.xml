@@ -3,7 +3,7 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
@@ -18,7 +18,7 @@
             <dep>consent_form_element_listing.consent_form_element_listing_data_source</dep>
         </deps>
         <buttons>
-            <button name="add" class="Endora\ExpertSenderCdp\Block\Adminhtml\GenericAddButton"/>
+            <button name="add" class="ExpertSender\Ecdp\Block\Adminhtml\GenericAddButton"/>
         </buttons>
     </settings>
     <dataSource name="consent_form_element_listing_data_source" component="Magento_Ui/js/grid/provider">
@@ -91,23 +91,23 @@
                 <label translate="true">Content</label>
             </settings>
         </column>
-        <column name="form" sortOrder="20" class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column\Form">
+        <column name="form" sortOrder="20" class="ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column\Form">
             <settings>
                 <filter>select</filter>
-                <options class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column\Form\Options"/>
+                <options class="ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column\Form\Options"/>
                 <dataType>select</dataType>
                 <label translate="true">Form</label>
             </settings>
         </column>
-        <column name="consent_ids" sortOrder="30" class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column\Consents">
+        <column name="consent_ids" sortOrder="30" class="ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column\Consents">
             <settings>
                 <filter>select</filter>
-                <options class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column\Consent\Options"/>
+                <options class="ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column\Consent\Options"/>
                 <dataType>select</dataType>
                 <label translate="true">Consents</label>
             </settings>
         </column>
-        <column name="enabled" sortOrder="40" class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column\Enabled">
+        <column name="enabled" sortOrder="40" class="ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column\Enabled">
             <settings>
                 <filter>select</filter>
                 <options class="Magento\Config\Model\Config\Source\Yesno"/>
@@ -121,15 +121,15 @@
                 <label>Sort Order</label>
             </settings>
         </column>
-        <column name="store" sortOrder="60" class="Endora\ExpertSenderCdp\Ui\Component\Generic\Listing\Column\Store">
+        <column name="store" sortOrder="60" class="ExpertSender\Ecdp\Ui\Component\Generic\Listing\Column\Store">
             <settings>
                 <filter>select</filter>
-                <options class="Endora\ExpertSenderCdp\Ui\Component\Generic\Listing\Column\Store\Options"/>
+                <options class="ExpertSender\Ecdp\Ui\Component\Generic\Listing\Column\Store\Options"/>
                 <dataType>select</dataType>
                 <label translate="true">Store</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column\Actions" sortOrder="100">
+        <actionsColumn name="actions" class="ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column\Actions" sortOrder="100">
             <settings>
                 <indexField>id</indexField>
             </settings>

@@ -2,26 +2,26 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\FieldMapping;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\FieldMapping;
 
-use Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface;
+use ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 
 class Delete extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::field_mapping_delete';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::field_mapping_delete';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface
      */
     protected $fieldMappingRepository;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
+     * @param \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
      */
     public function __construct(FieldMappingRepositoryInterface $fieldMappingRepository, Context $context)
     {

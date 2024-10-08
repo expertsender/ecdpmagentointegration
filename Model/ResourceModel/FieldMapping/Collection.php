@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping;
+namespace ExpertSender\Ecdp\Model\ResourceModel\FieldMapping;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
@@ -21,8 +21,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \Endora\ExpertSenderCdp\Model\FieldMapping::class,
-            \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping::class
+            \ExpertSender\Ecdp\Model\FieldMapping::class,
+            \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping::class
         );
     }
 }

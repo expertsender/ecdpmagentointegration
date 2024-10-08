@@ -2,14 +2,14 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Controller\Adminhtml\FieldMapping;
+namespace ExpertSender\Ecdp\Controller\Adminhtml\FieldMapping;
 
-use Endora\ExpertSenderCdp\Api\Data\FieldMappingInterfaceFactory;
-use Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface;
-use Endora\ExpertSenderCdp\Model\FieldMapping\Entity;
+use ExpertSender\Ecdp\Api\Data\FieldMappingInterfaceFactory;
+use ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface;
+use ExpertSender\Ecdp\Model\FieldMapping\Entity;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Exception\AlreadyExistsException;
@@ -18,21 +18,21 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 class Save extends Action
 {
-    public const ADMIN_RESOURCE = 'Endora_ExpertSenderCdp::field_mapping_edit';
+    public const ADMIN_RESOURCE = 'ExpertSender_Ecdp::field_mapping_edit';
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\FieldMappingInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\Data\FieldMappingInterfaceFactory
      */
     protected $fieldMappingFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface
      */
     protected $fieldMappingRepository;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\FieldMappingInterfaceFactory $fieldMappingFactory
-     * @param \Endora\ExpertSenderCdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
+     * @param \ExpertSender\Ecdp\Api\Data\FieldMappingInterfaceFactory $fieldMappingFactory
+     * @param \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
      * @param \Magento\Backend\App\Action\Context $context
      */
     public function __construct(
@@ -69,7 +69,7 @@ class Save extends Action
                 $fieldMapping = $this->fieldMappingFactory->create();
             }
 
-            /** @var \Endora\ExpertSenderCdp\Api\Data\FieldMappingInterface $fieldMapping */
+            /** @var \ExpertSender\Ecdp\Api\Data\FieldMappingInterface $fieldMapping */
             $fieldMapping->setData($data);
 
             try {

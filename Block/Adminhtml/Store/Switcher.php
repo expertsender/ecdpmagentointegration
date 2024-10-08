@@ -2,10 +2,10 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Block\Adminhtml\Store;
+namespace ExpertSender\Ecdp\Block\Adminhtml\Store;
 
 class Switcher extends \Magento\Backend\Block\Store\Switcher
 {

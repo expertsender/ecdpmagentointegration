@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Form\Column\Form;
+namespace ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Form\Column\Form;
 
-use Endora\ExpertSenderCdp\Model\Consent\FormElement\Form;
+use ExpertSender\Ecdp\Model\Consent\FormElement\Form;
 use Magento\Framework\Data\OptionSourceInterface;
 
 class Options implements OptionSourceInterface
@@ -18,12 +18,12 @@ class Options implements OptionSourceInterface
     protected $options;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\Consent\FormElement\Form
+     * @var \ExpertSender\Ecdp\Model\Consent\FormElement\Form
      */
     protected $form;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Consent\FormElement\Form $form
+     * @param \ExpertSender\Ecdp\Model\Consent\FormElement\Form $form
      */
     public function __construct(Form $form)
     {

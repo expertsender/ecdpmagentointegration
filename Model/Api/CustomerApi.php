@@ -2,13 +2,13 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model\Api;
+namespace ExpertSender\Ecdp\Model\Api;
 
-use Endora\ExpertSenderCdp\Model\Api\Dto\Customer;
-use Endora\ExpertSenderCdp\Model\Api\EcdpApi;
+use ExpertSender\Ecdp\Model\Api\Dto\Customer;
+use ExpertSender\Ecdp\Model\Api\EcdpApi;
 
 class CustomerApi extends EcdpApi
 {
@@ -20,8 +20,8 @@ class CustomerApi extends EcdpApi
     protected const MODE_REPLACE = 'Update';
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Customer $customer
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Customer $customer
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function addCustomer(Customer $customer)
     {
@@ -29,8 +29,8 @@ class CustomerApi extends EcdpApi
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Customer $customer
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Customer $customer
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function updateCustomer(Customer $customer)
     {
@@ -40,7 +40,7 @@ class CustomerApi extends EcdpApi
     /**
      * @param string $email
      * @param int $storeId
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     public function getCustomer(string $email, int $storeId)
     {
@@ -51,9 +51,9 @@ class CustomerApi extends EcdpApi
     }
 
     /**
-     * @param \Endora\ExpertSenderCdp\Model\Api\Dto\Customer $customer
+     * @param \ExpertSender\Ecdp\Model\Api\Dto\Customer $customer
      * @param string $mode
-     * @return \Endora\ExpertSenderCdp\Model\Api\ApiResponse
+     * @return \ExpertSender\Ecdp\Model\Api\ApiResponse
      */
     protected function postCustomer(Customer $customer, string $mode)
     {

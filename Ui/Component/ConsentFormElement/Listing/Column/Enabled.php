@@ -2,12 +2,12 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Ui\Component\ConsentFormElement\Listing\Column;
+namespace ExpertSender\Ecdp\Ui\Component\ConsentFormElement\Listing\Column;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
 use Magento\Ui\Component\Listing\Columns\Column;
 
 class Enabled extends Column

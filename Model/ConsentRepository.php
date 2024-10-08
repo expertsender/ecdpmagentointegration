@@ -2,19 +2,19 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Model;
+namespace ExpertSender\Ecdp\Model;
 
-use Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentInterface;
-use Endora\ExpertSenderCdp\Api\Data\ConsentInterfaceFactory;
-use Endora\ExpertSenderCdp\Api\ConsentRepositoryInterface;
-use Endora\ExpertSenderCdp\Api\ConsentSearchResultInterfaceFactory;
-use Endora\ExpertSenderCdp\Api\Data\ConsentFormElementInterface;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent as ConsentResource;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent\CollectionFactory;
+use ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentInterface;
+use ExpertSender\Ecdp\Api\Data\ConsentInterfaceFactory;
+use ExpertSender\Ecdp\Api\ConsentRepositoryInterface;
+use ExpertSender\Ecdp\Api\ConsentSearchResultInterfaceFactory;
+use ExpertSender\Ecdp\Api\Data\ConsentFormElementInterface;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent as ConsentResource;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent\CollectionFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessor;
 use Magento\Framework\Api\SearchCriteriaBuilderFactory;
 use Magento\Framework\Api\SearchCriteriaInterface;
@@ -27,22 +27,22 @@ use Magento\Framework\Exception\NoSuchEntityException;
 class ConsentRepository implements ConsentRepositoryInterface
 {
     /**
-     * @var \Endora\ExpertSenderCdp\Api\Data\ConsentInterface
+     * @var \ExpertSender\Ecdp\Api\Data\ConsentInterface
      */
     protected $consentFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\Consent
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\Consent
      */
     protected $resource;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentSearchResultInterfaceFactory
+     * @var \ExpertSender\Ecdp\Api\ConsentSearchResultInterfaceFactory
      */
     protected $consentSearchResultFactory;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping\CollectionFactory
+     * @var \ExpertSender\Ecdp\Model\ResourceModel\FieldMapping\CollectionFactory
      */
     protected $collectionFactory;
 
@@ -57,18 +57,18 @@ class ConsentRepository implements ConsentRepositoryInterface
     protected $collectionProcessor;
 
     /**
-     * @var \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface
+     * @var \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface
      */
     protected $consentFormElementRepository;
 
     /**
-     * @param \Endora\ExpertSenderCdp\Api\Data\ConsentInterfaceFactory $consentFactory
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Consent $resource
-     * @param \Endora\ExpertSenderCdp\Api\ConsentSearchResultInterfaceFactory $consentSearchResultFactory
-     * @param \Endora\ExpertSenderCdp\Model\ResourceModel\Consent\CollectionFactory $collectionFactory
+     * @param \ExpertSender\Ecdp\Api\Data\ConsentInterfaceFactory $consentFactory
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Consent $resource
+     * @param \ExpertSender\Ecdp\Api\ConsentSearchResultInterfaceFactory $consentSearchResultFactory
+     * @param \ExpertSender\Ecdp\Model\ResourceModel\Consent\CollectionFactory $collectionFactory
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
      * @param \Magento\Framework\Api\SearchCriteria\CollectionProcessor $collectionProcessor
-     * @param \Endora\ExpertSenderCdp\Api\ConsentFormElementRepositoryInterface $consentFormElementRepository
+     * @param \ExpertSender\Ecdp\Api\ConsentFormElementRepositoryInterface $consentFormElementRepository
      */
     public function __construct(
         ConsentInterfaceFactory $consentFactory,

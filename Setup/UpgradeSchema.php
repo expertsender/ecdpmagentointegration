@@ -2,19 +2,19 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 
-namespace Endora\ExpertSenderCdp\Setup;
+namespace ExpertSender\Ecdp\Setup;
 
-use Endora\ExpertSenderCdp\Api\Data\ConsentInterface;
-use Endora\ExpertSenderCdp\Api\Data\FieldMappingInterface;
-use Endora\ExpertSenderCdp\Api\Data\OrderStatusMappingInterface;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Consent\FormElement;
-use Endora\ExpertSenderCdp\Model\ResourceModel\FieldMapping;
-use Endora\ExpertSenderCdp\Model\ResourceModel\OrderStatusMapping;
-use Endora\ExpertSenderCdp\Model\ResourceModel\Task;
+use ExpertSender\Ecdp\Api\Data\ConsentInterface;
+use ExpertSender\Ecdp\Api\Data\FieldMappingInterface;
+use ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterface;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent;
+use ExpertSender\Ecdp\Model\ResourceModel\Consent\FormElement;
+use ExpertSender\Ecdp\Model\ResourceModel\FieldMapping;
+use ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping;
+use ExpertSender\Ecdp\Model\ResourceModel\Task;
 use Magento\Framework\DB\Adapter\AdapterInterface;
 use Magento\Framework\DB\Ddl\Table;
 use Magento\Framework\Setup\SchemaSetupInterface;

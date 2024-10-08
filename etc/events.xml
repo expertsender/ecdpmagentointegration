@@ -3,17 +3,17 @@
 /**
  * @author Endora
  * @copyright Copyright (c) Endora (https://endora.software)
- * @package Endora_ExpertSenderCdp
+ * @package ExpertSender_Ecdp
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="sales_order_save_after">
         <observer name="endora_expertsender_send_order_data_after_save"
-            instance="Endora\ExpertSenderCdp\Observer\Order\SendOrderDataAfterSave"/>
+            instance="ExpertSender\Ecdp\Observer\Order\SendOrderDataAfterSave"/>
     </event>
     <event name="customer_address_save_after">
         <observer name="endora_expertsender_send_customer_data_after_address_edit"
-            instance="Endora\ExpertSenderCdp\Observer\Customer\SendCustomerDataAfterAddressEdit"/>
+            instance="ExpertSender\Ecdp\Observer\Customer\SendCustomerDataAfterAddressEdit"/>
     </event>
 </config>
