@@ -8,6 +8,7 @@
 namespace ExpertSender\Ecdp\Ui\Component\OrderStatusMapping\Listing\Column;
 
 use ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterface;
+use ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus as EcdpOrderStatusModel;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
@@ -25,13 +26,14 @@ class EcdpOrderStatus extends Column
     protected $ecdpOrderStatus;
 
     /**
+     * @param \ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus $ecdpOrderStatus
      * @param \Magento\Framework\View\Element\UiComponent\ContextInterface $context
      * @param \Magento\Framework\View\Element\UiComponentFactory $uiComponentFactory
      * @param array $components
      * @param array $data
      */
     public function __construct(
-        EcdpOrderStatus $ecdpOrderStatus,
+        EcdpOrderStatusModel $ecdpOrderStatus,
         ContextInterface $context,
         UiComponentFactory $uiComponentFactory,
         array $components = [],
