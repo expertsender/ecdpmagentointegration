@@ -1,7 +1,7 @@
 {
     "name": "expertsender/ecdp",
     "description": "Integration with ExpertSender CDP",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "license": "proprietary",
     "type": "magento2-module",
     "require": {
