@@ -26,6 +26,7 @@
             </customer_data>
             <order_data>
                 <order_identifier>id</order_identifier>
+                <category_format>all</category_format>
             </order_data>
         </endora_expertsender>
         <endora_expertsender_forms>

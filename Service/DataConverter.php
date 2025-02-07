@@ -21,6 +21,7 @@ use ExpertSender\Ecdp\Model\Api\Dto\Product;
 use ExpertSender\Ecdp\Model\Config;
 use ExpertSender\Ecdp\Model\Config\OrderIdentifier;
 use ExpertSender\Ecdp\Model\Config\PhoneFromAddress;
+use ExpertSender\Ecdp\Service\Converter\CategoryResolver;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\Customer\Api\AddressRepositoryInterface;
@@ -88,6 +89,11 @@ class DataConverter
     protected $searchCriteriaBuilderFactory;
 
     /**
+     * @var \ExpertSender\Ecdp\Service\Converter\CategoryResolver
+     */
+    protected $categoryResolver;
+
+    /**
      * @param \Magento\Framework\Stdlib\DateTime\TimezoneInterface $timezone
      * @param \ExpertSender\Ecdp\Api\FieldMappingRepositoryInterface $fieldMappingRepository
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
@@ -98,6 +104,7 @@ class DataConverter
      * @param \ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface $orderStatusMappingRepository
      * @param \Magento\Eav\Api\AttributeRepositoryInterface $attributeRepository
      * @param \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
+     * @param \ExpertSender\Ecdp\Service\Converter\CategoryResolver $categoryResolver
      */
     public function __construct(
         TimezoneInterface $timezone,
@@ -109,7 +116,8 @@ class DataConverter
         Config $config,
         OrderStatusMappingRepositoryInterface $orderStatusMappingRepository,
         AttributeRepositoryInterface $attributeRepository,
-        SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
+        SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory,
+        CategoryResolver $categoryResolver
     ) {
         $this->timezone = $timezone;
         $this->fieldMappingRepository = $fieldMappingRepository;
@@ -121,6 +129,7 @@ class DataConverter
         $this->orderStatusMappingRepository = $orderStatusMappingRepository;
         $this->attributeRepository = $attributeRepository;
         $this->searchCriteriaBuilderFactory = $searchCriteriaBuilderFactory;
+        $this->categoryResolver = $categoryResolver;
     }
 
     /**
@@ -302,7 +311,10 @@ class DataConverter
             $product->setStoreId($store->getId());
 
             if ($product) {
-                $category = $product->getCategory();
+                $category = $this->categoryResolver->execute(
+                    $product->getCategoryIds(),
+                    (int) $store->getId()
+                );
                 $childProduct = null;
 
                 if (Configurable::TYPE_CODE === $product->getTypeId()) {
@@ -334,7 +346,7 @@ class DataConverter
                     ->setReturned($orderItem->getQtyReturned() ?? 0)
                     ->setUrl($product->getProductUrl())
                     ->setImageUrl($imageUrl)
-                    ->setCategory(null === $category ? '' : $category->getName())
+                    ->setCategory($category)
                     ->setProductAttributes($this->getEntityAttributes($product, $mappings->getItems(), $childProduct));
 
                 $productDtoArray[] = $productDto;

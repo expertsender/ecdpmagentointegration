@@ -92,7 +92,13 @@ class Task extends AbstractModel implements TaskInterface
      */
     public function getCustomData()
     {
-        return json_decode($this->getData(self::CUSTOM_DATA), true);
+        $data = $this->getData(self::CUSTOM_DATA);
+
+        if (null !== $data) {
+            return json_decode($data, true);
+        }
+
+        return null;
     }
 
     /**

@@ -44,6 +44,8 @@ Consents,Zgody
 "SKU","SKU"
 "Billing address","Adres rozliczeniowy"
 "Shipping address","Adres dostawy"
+"All categories","Wszystkie kategorie"
+"Last category","Ostatnia kategoria"
 Registration,Rejestracja
 "Profile Edit","Edycja profilu"
 Checkout,Strona płatności
@@ -114,6 +116,7 @@ Settings,Ustawienia
 "Send customer phone number","Przesyłanie numeru telefonu klienta"
 "Order data","Dane zamówień"
 "Order identifier","Identyfikator zamówienia"
+"Category sent format","Format kategorii produktu"
 Forms,Formularze
 General,Ogólne
 "Text to display before consents in forms","Tekst wyświetlany przed zgodami w formularzach"

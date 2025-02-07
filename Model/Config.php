@@ -24,6 +24,7 @@ class Config
     public const PHONE_FROM_ADDRESS = 'customer_data/phone_from_address';
     public const SEND_CUSTOMER_PHONE_ENABLED = 'customer_data/send_customer_phone_enabled';
     public const ORDER_IDENTIFIER = 'order_data/order_identifier';
+    public const CATEGORY_FORMAT_PATH = 'order_data/category_format';
 
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
@@ -144,6 +145,15 @@ class Config
     public function getOrderIdentifier(?string $scope = null)
     {
         return $this->getConfig(self::ORDER_IDENTIFIER, $scope);
+    }
+
+    /**
+     * @param string|null $scope
+     * @return string
+     */
+    public function getCategoryFormat(?string $scope = null)
+    {
+        return $this->getConfig(self::CATEGORY_FORMAT_PATH, $scope);
     }
 
     /**
