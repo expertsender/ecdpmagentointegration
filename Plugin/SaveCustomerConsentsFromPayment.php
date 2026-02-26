@@ -76,7 +76,7 @@ class SaveCustomerConsentsFromPayment
         PaymentInformationManagement $subject,
         $cartId,
         PaymentInterface $paymentMethod,
-        AddressInterface $billingAddress = null
+        ?AddressInterface $billingAddress = null
     ) {
         $quote = $this->quoteRepository->getActive($cartId);
         $customer = $quote->getCustomer();

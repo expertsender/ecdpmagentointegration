@@ -11,6 +11,7 @@ use ExpertSender\Ecdp\Model\Config;
 use Magento\Framework\Filesystem\DriverInterface;
 use Magento\Framework\Logger\Handler\Base;
 use Monolog\Logger;
+use Monolog\LogRecord;
 
 class ApiHandler extends Base
 {
@@ -53,7 +54,7 @@ class ApiHandler extends Base
     /**
      * {@inheritdoc}
      */
-    public function write(array $record): void
+    public function write(LogRecord $record): void
     {
         if (true === $this->enabled) {
             parent::write($record);

@@ -60,7 +60,7 @@ class GuestSaveCustomerConsentsFromPayment
         $cartId,
         $email,
         PaymentInterface $paymentMethod,
-        AddressInterface $billingAddress = null
+        ?AddressInterface $billingAddress = null
     ) {
         $consents = $paymentMethod->getExtensionAttributes()->getCustomerConsents();
         $formType = $this->formsConfig->getCheckoutFormType();

@@ -34,8 +34,8 @@ class OrderSyncInterval extends Value
         ScopeConfigInterface $config,
         ValueFactory $configValueFactory,
         TypeListInterface $cacheTypeList,
-        AbstractResource $resource = null,
-        AbstractDb $resourceCollection = null,
+        ?AbstractResource $resource = null,
+        ?AbstractDb $resourceCollection = null,
         $runModelPath = '',
         array $data = []
     ) {

@@ -1,0 +1,73 @@
+{
+    "endora_expertsender_field_mappings": {
+        "column": {
+            "id": true,
+            "magento_field": true,
+            "ecdp_field": true,
+            "entity": true,
+            "store": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ENDORA_EXPERTSENDER_FIELD_MAPPINGS_ECDP_FIELD_STORE_ENTITY": true,
+            "ENDORA_EXPERTSENDER_FIELD_MAPPINGS_STORE_STORE_STORE_ID": true
+        }
+    },
+    "endora_expertsender_tasks": {
+        "column": {
+            "id": true,
+            "task": true,
+            "object_id": true,
+            "attempts": true,
+            "custom_data": true,
+            "store": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ENDORA_EXPERTSENDER_TASKS_STORE_STORE_STORE_ID": true
+        }
+    },
+    "endora_expertsender_consents": {
+        "column": {
+            "id": true,
+            "name": true,
+            "ecdp_id": true,
+            "store": true,
+            "ecdp_label": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ENDORA_EXPERTSENDER_CONSENTS_NAME": true,
+            "ENDORA_EXPERTSENDER_CONSENTS_ECDP_ID_STORE": true,
+            "ENDORA_EXPERTSENDER_CONSENTS_STORE_STORE_STORE_ID": true
+        }
+    },
+    "endora_expertsender_consent_form_elements": {
+        "column": {
+            "id": true,
+            "content": true,
+            "form": true,
+            "consent_ids": true,
+            "enabled": true,
+            "sort_order": true,
+            "store": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ENDORA_EXPERTSENDER_CONSENT_FORM_ELEMENTS_STORE_STORE_STORE_ID": true
+        }
+    },
+    "endora_expertsender_order_status_mappings": {
+        "column": {
+            "id": true,
+            "ecdp_order_status": true,
+            "magento_order_statuses": true,
+            "store": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ENDORA_EXPERTSENDER_ORDER_STS_MAPPINGS_ECDP_ORDER_STS_STORE": true,
+            "ENDORA_EXPERTSENDER_ORDER_STATUS_MAPPINGS_STORE_STORE_STORE_ID": true
+        }
+    }
+}

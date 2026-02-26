@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Endora
+ * @copyright Copyright (c) Endora (https://endora.software)
+ * @package ExpertSender_Ecdp
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="endora_expertsender_field_mappings" resource="default" engine="innodb" comment="ExpertSender custom mappings">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="varchar" name="magento_field" nullable="false" length="255" comment="Magento field name"/>
+        <column xsi:type="varchar" name="ecdp_field" nullable="false" length="255" comment="ECDP field name"/>
+        <column xsi:type="smallint" name="entity" unsigned="true" nullable="false" comment="Entity class"/> 
+        <column xsi:type="smallint" name="store" unsigned="true" nullable="false" comment="Store ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="ENDORA_EXPERTSENDER_FIELD_MAPPINGS_ECDP_FIELD_STORE_ENTITY">
+            <column name="ecdp_field"/>
+            <column name="store"/>
+            <column name="entity"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="ENDORA_EXPERTSENDER_FIELD_MAPPINGS_STORE_STORE_STORE_ID"
+            table="endora_expertsender_order_status_mappings" column="store" referenceTable="store"
+            referenceColumn="store_id" onDelete="CASCADE"/>
+    </table>
+
+    <table name="endora_expertsender_tasks" resource="default" engine="innodb" comment="ExpertSender tasks">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="varchar" name="task" nullable="false" length="255" comment="Task name"/>
+        <column xsi:type="int" name="object_id" unsigned="true" nullable="true" comment="Entity ID"/>
+        <column xsi:type="smallint" name="attempts" unsigned="true" nullable="false" comment="Attempts"/>
+        <column xsi:type="text" name="custom_data" nullable="true" comment="Object data"/>
+        <column xsi:type="smallint" name="store" unsigned="true" nullable="false" comment="Store ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="ENDORA_EXPERTSENDER_TASKS_STORE_STORE_STORE_ID"
+            table="endora_expertsender_order_status_mappings" column="store" referenceTable="store"
+            referenceColumn="store_id" onDelete="CASCADE"/>
+    </table>
+
+    <table name="endora_expertsender_consents" resource="default" engine="innodb" comment="ExpertSender tasks">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Name"/>
+        <column xsi:type="smallint" name="ecdp_id" unsigned="true" nullable="false" comment="ECDP Consent ID"/>
+        <column xsi:type="smallint" name="store" unsigned="true" nullable="false" comment="Store ID"/>
+        <column xsi:type="text" name="ecdp_label" nullable="false" comment="ECDP Label"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="ENDORA_EXPERTSENDER_CONSENTS_NAME">
+            <column name="name"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="ENDORA_EXPERTSENDER_CONSENTS_ECDP_ID_STORE">
+            <column name="ecdp_id"/>
+            <column name="store"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="ENDORA_EXPERTSENDER_CONSENTS_STORE_STORE_STORE_ID"
+            table="endora_expertsender_order_status_mappings" column="store" referenceTable="store"
+            referenceColumn="store_id" onDelete="CASCADE"/>
+    </table>
+
+    <table name="endora_expertsender_consent_form_elements" resource="default" engine="innodb">
+        <column xsi:type="int" name="id" unsigned="true" padding="11" nullable="false" identity="true"/>
+        <column xsi:type="varchar" name="content" nullable="false" length="255" comment="Content"/>
+        <column xsi:type="varchar" name="form" nullable="false" length="255" comment="Form"/>
+        <column xsi:type="text" name="consent_ids" nullable="false" comment="ECDP Consent IDs"/>
+        <column xsi:type="boolean" name="enabled" nullable="false" comment="Is enabled"/>
+        <column xsi:type="smallint" name="sort_order" unsigned="true" nullable="true"/>
+        <column xsi:type="smallint" name="store" unsigned="true" nullable="false" comment="Store ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="ENDORA_EXPERTSENDER_CONSENT_FORM_ELEMENTS_STORE_STORE_STORE_ID"
+            table="endora_expertsender_order_status_mappings" column="store" referenceTable="store"
+            referenceColumn="store_id" onDelete="CASCADE"/>
+    </table>
+
+    <table name="endora_expertsender_order_status_mappings" resource="default" engine="innodb">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="varchar" name="ecdp_order_status" nullable="false" length="255" comment="ECDP order status"/>
+        <column xsi:type="text" name="magento_order_statuses" nullable="false" comment="Magento order statuses"/>
+        <column xsi:type="smallint" name="store" unsigned="true" nullable="false" comment="Store ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="ENDORA_EXPERTSENDER_ORDER_STS_MAPPINGS_ECDP_ORDER_STS_STORE">
+            <column name="ecdp_order_status"/>
+            <column name="store"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="ENDORA_EXPERTSENDER_ORDER_STATUS_MAPPINGS_STORE_STORE_STORE_ID"
+            table="endora_expertsender_order_status_mappings" column="store" referenceTable="store"
+            referenceColumn="store_id" onDelete="CASCADE"/>
+    </table>
+</schema>

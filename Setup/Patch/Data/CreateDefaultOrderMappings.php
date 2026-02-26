@@ -5,19 +5,16 @@
  * @package ExpertSender_Ecdp
  */
 
-namespace ExpertSender\Ecdp\Setup;
+namespace ExpertSender\Ecdp\Setup\Patch\Data;
 
 use ExpertSender\Ecdp\Api\Data\OrderStatusMappingInterfaceFactory;
 use ExpertSender\Ecdp\Api\OrderStatusMappingRepositoryInterface;
 use ExpertSender\Ecdp\Model\OrderStatusMapping\EcdpOrderStatus;
-use ExpertSender\Ecdp\Model\ResourceModel\OrderStatusMapping;
-use Magento\Framework\Setup\ModuleDataSetupInterface;
-use Magento\Framework\Setup\ModuleContextInterface;
-use Magento\Framework\Setup\UpgradeDataInterface;
+use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Sales\Model\ResourceModel\Order\Status\Collection;
 use Magento\Store\Model\StoreManagerInterface;
 
-class UpgradeData implements UpgradeDataInterface
+class CreateDefaultOrderMappings implements DataPatchInterface
 {
     private const DEFAULT_ECDP_ORDER_STATSUES = [
         EcdpOrderStatus::PLACED => [
@@ -78,25 +75,22 @@ class UpgradeData implements UpgradeDataInterface
     /**
      * {@inheritdoc}
      */
-    public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
+    public static function getDependencies()
     {
-        $installer = $setup;
-        $installer->startSetup();
-
-        if (version_compare($context->getVersion(), '1.0.1', '<')) {
-            if ($installer->tableExists(OrderStatusMapping::TABLE_NAME)) {
-                $this->createDefaultOrderStatusMappings();
-            }
-        }
-
-        $installer->endSetup();
+        return [];
     }
 
     /**
-     * @return void
+     * {@inheritdoc}
      */
-    private function createDefaultOrderStatusMappings()
+    public function apply()
     {
+        $mappings = $this->orderStatusMappingRepository->getAll();
+
+        if ($mappings->getTotalCount() > 0) {
+            return;
+        }
+
         $allMagentoStatuses = $this->orderStatusCollection->toOptionArray();
 
         foreach ($this->storeManager->getStores() as $store) {
@@ -117,5 +111,13 @@ class UpgradeData implements UpgradeDataInterface
                 $this->orderStatusMappingRepository->save($orderStatusMapping);
             }
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAliases()
+    {
+        return [];
     }
 }
